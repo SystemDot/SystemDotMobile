@@ -6,7 +6,7 @@
         <title>SystemDotMobile</title>
         <authors>Chris Sampson,James Goodenough</authors>
         <owners>Chris Sampson,James Goodenough</owners>
-        <projectUrl></projectUrl>
+        <projectUrl>https://github.com/SystemDot/SystemDotMobile</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Mobile UI library for cross platform development on iOS, Android, WinRT and Windows</description>
         <summary>Mobile UI library for cross platform development on iOS, Android, WinRT and Windows</summary>
