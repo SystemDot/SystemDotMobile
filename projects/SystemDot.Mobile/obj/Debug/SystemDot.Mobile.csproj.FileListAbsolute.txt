@@ -1,5 +1,4 @@
 C:\work\SDMobile\Build\SystemDot.Mobile.dll
 C:\work\SDMobile\Build\SystemDot.Mobile.pdb
-C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
 C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
 C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb
