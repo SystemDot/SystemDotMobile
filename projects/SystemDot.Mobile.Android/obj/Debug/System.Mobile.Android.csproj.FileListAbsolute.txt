@@ -1,0 +1,11 @@
+C:\work\SDMobile\Build\System.Mobile.Android.dll
+C:\work\SDMobile\Build\System.Mobile.Android.pdb
+C:\work\SDMobile\Build\System.Mobile.Android.dll.mdb
+C:\work\SDMobile\Build\System.Mobile.Android.apk
+C:\work\SDMobile\Build\System.Mobile.Android-Signed.apk
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\System.Mobile.Android.csprojResolveAssemblyReference.cache
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\System.Mobile.Android.dll
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\System.Mobile.Android.pdb
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\android\bin\System.Mobile.Android.apk
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\R.cs.flag
+C:\work\SDMobile\projects\System.Mobile.Android\obj\Debug\uploadflags.txt

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>SystemDotMobile</id>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
         <title>SystemDotMobile</title>
         <authors>Chris Sampson,James Goodenough</authors>
         <owners>Chris Sampson,James Goodenough</owners>
@@ -16,11 +16,15 @@
         <dependencies>
             <dependency id="SystemDotCore" version="1.1.2" />
             <dependency id="MvvmCross.HotTuna.CrossCore" version="3.1.1" />
+            <dependency id="MvvmCross.HotTuna.MvvmCrossLibraries" version="3.1.1" />
+            <dependency id="MvvmCross.HotTuna.Plugin.FieldBinding" version="3.1.1" />
         </dependencies>
     </metadata>
     <files>
         <file src="Build\SystemDot.Mobile.dll" target="lib\MonoAndroid\SystemDot.Mobile.dll" />
-        <file src="Build\SystemDot.Mobile.dll" target="lib\MonoTouch\SystemDot.Mobile.dll" />
+        <file src="Build\SystemDot.Mobile.Android.dll" target="lib\MonoAndroid\SystemDot.Mobile.Android.dll" />
+        <file src="Build\SystemDot.Mobile.dll" target="lib\MonoTouch\SystemDot.Mobile.iOS.dll" />
+        <file src="Build\SystemDot.Mobile.iOS.dll" target="lib\MonoTouch\SystemDot.Mobile.dll" />
         <file src="Build\SystemDot.Mobile.dll" target="lib\net\SystemDot.Mobile.dll" />
         <file src="Build\SystemDot.Mobile.dll" target="lib\netcore\SystemDot.Mobile.dll" />
         <file src="Build\SystemDot.Mobile.dll" target="lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Mobile.dll" />

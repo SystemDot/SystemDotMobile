@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemDot.Mobile", "projects\SystemDot.Mobile\SystemDot.Mobile.csproj", "{0E1CBF81-0E1C-46B3-BD68-8EEFF9E44E87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemDot.Mobile.iOS", "projects\SystemDot.Mobile.iOS\SystemDot.Mobile.iOS.csproj", "{66890969-CAE9-4BC1-867B-445C9098DB0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemDot.Mobile.Android", "projects\SystemDot.Mobile.Android\SystemDot.Mobile.Android.csproj", "{878FAA14-6048-486E-B63F-52BAF8F618A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0E1CBF81-0E1C-46B3-BD68-8EEFF9E44E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1CBF81-0E1C-46B3-BD68-8EEFF9E44E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1CBF81-0E1C-46B3-BD68-8EEFF9E44E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66890969-CAE9-4BC1-867B-445C9098DB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66890969-CAE9-4BC1-867B-445C9098DB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66890969-CAE9-4BC1-867B-445C9098DB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66890969-CAE9-4BC1-867B-445C9098DB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878FAA14-6048-486E-B63F-52BAF8F618A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878FAA14-6048-486E-B63F-52BAF8F618A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878FAA14-6048-486E-B63F-52BAF8F618A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878FAA14-6048-486E-B63F-52BAF8F618A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

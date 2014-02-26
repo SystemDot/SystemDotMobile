@@ -1,0 +1,5 @@
+C:\work\SDMobile\Build\SystemDot.Mobile.iOS.dll
+C:\work\SDMobile\Build\SystemDot.Mobile.iOS.pdb
+C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.csprojResolveAssemblyReference.cache
+C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.dll
+C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
