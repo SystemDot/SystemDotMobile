@@ -1,4 +1,5 @@
 using SystemDot.Ioc;
+using SystemDot.Mobile.Throttling;
 
 namespace SystemDot.Mobile.Configuration
 {
@@ -6,11 +7,7 @@ namespace SystemDot.Mobile.Configuration
     {
         public static void RegisterMobile(this IIocContainer container)
         {
-            container.RegisterFromAssemblyOf<IDummyForRegistration>();
-        }
-
-        interface IDummyForRegistration
-        { 
+            container.RegisterFromAssemblyOf<ThrottleFactory>();
         }
     }
 }

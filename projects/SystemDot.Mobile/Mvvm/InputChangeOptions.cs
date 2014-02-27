@@ -4,36 +4,45 @@ using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile.Mvvm
 {
-    public class InputChangeOptions<TViewModel, TProperty> where TViewModel : ViewModel<TViewModel>
+    public interface IInputChangeRunner
+    {
+        void Run(Action toRun);
+    }
+
+    public class InputChangeOptions<TViewModel, TProperty> : 
+        IInputChangeRunner 
+        where TViewModel : ViewModel<TViewModel>
     {
         readonly TViewModel model;
         readonly Func<TViewModel, INotifyChange<TProperty>> property;
-        readonly IThrottler<TViewModel> throttler;
+        readonly IThrottleFactory throttleFactory;
 
         public InputChangeOptions(
             TViewModel model,
             Func<TViewModel, INotifyChange<TProperty>> property,
-            IThrottler<TViewModel> throttler)
+            IThrottleFactory throttleFactory)
         {
             this.model = model;
             this.property = property;
-            this.throttler = throttler;
+            this.throttleFactory = throttleFactory;
         }
 
-        public void Run(Action toRun)
+        public virtual void Run(Action toRun)
         {
             property
                 .Invoke(model)
                 .Changed += (_, __) => toRun();
         }
 
-        public ThrottleOptions<TViewModel, TProperty> ThrottleFor(TimeSpan throttleTime)
+        public InputChangeOptions<TViewModel, TOrProperty> OrInputChangedFor<TOrProperty>(
+            Func<TViewModel, INotifyChange<TOrProperty>> orProperty)
         {
-            return new ThrottleOptions<TViewModel, TProperty>(
-                model,
-                property,
-                throttler,
-                throttleTime);
+            return new OrInputChangeOptions<TViewModel, TOrProperty>(this, model, orProperty, throttleFactory);
+        }
+
+        public ThrottleOptions ThrottleFor(TimeSpan throttleTime)
+        {
+            return new ThrottleOptions(throttleFactory, throttleTime, this);
         }
     }
 }

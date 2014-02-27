@@ -10,19 +10,19 @@ namespace SystemDot.Mobile.Mvvm
 {
     public class ViewModel<TViewModel> : MvxViewModel where TViewModel : ViewModel<TViewModel>
     {
-        readonly IThrottler<TViewModel> throttler;
+        readonly IThrottleFactory throttleFactory;
         readonly List<IActionSubscriptionToken> tokens;
-
-        public ViewModel(IThrottler<TViewModel> throttler)
+        
+        public ViewModel(IThrottleFactory throttleFactory)
         {
-            this.throttler = throttler;
+            this.throttleFactory = throttleFactory;
             tokens = new List<IActionSubscriptionToken>();
         }
 
-        public InputChangeOptions<TViewModel, TProperty> OnInputChanged<TProperty>(
+        public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
             Func<TViewModel, INotifyChange<TProperty>> property)
         {
-            return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, throttler);
+            return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, throttleFactory);
         }
 
         protected void SendCommand<T>(Action<T> initaliseCommandAction) where T : new()

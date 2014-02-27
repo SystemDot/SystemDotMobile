@@ -1,31 +1,29 @@
 using System;
 using SystemDot.Mobile.Throttling;
-using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile.Mvvm
 {
-    public class ThrottleOptions<TViewModel, TProperty> where TViewModel : ViewModel<TViewModel>
+    public class ThrottleOptions
     {
-        readonly TViewModel model;
-        readonly Func<TViewModel, INotifyChange<TProperty>> property;
-        readonly IThrottler<TViewModel> throttler;
+        readonly IThrottleFactory throttleFactory;
         readonly TimeSpan throttleTime;
+        IThrottle throttle;
 
-        public ThrottleOptions(
-            TViewModel model, 
-            Func<TViewModel, INotifyChange<TProperty>> property, 
-            IThrottler<TViewModel> throttler, 
-            TimeSpan throttleTime)
+        public ThrottleOptions(IThrottleFactory throttleFactory, TimeSpan throttleTime, IInputChangeRunner runner)
         {
-            this.model = model;
-            this.property = property;
-            this.throttler = throttler;
+            this.throttleFactory = throttleFactory;
             this.throttleTime = throttleTime;
+            runner.Run(() => throttle.Invoke());
         }
     
         public void ThenRunOnMainThread(Action toRun)
         {
-            throttler.ThrottleActionOnMainThreadOnPropertyChange(model, property, toRun, throttleTime);
+            throttle = throttleFactory.CreateMainThreadMarshalledThrottle(toRun, throttleTime);
+        }
+
+        public void ThenRun(Action toRun)
+        {
+            throttle = throttleFactory.CreateThrottle(toRun, throttleTime);
         }
     }
 }

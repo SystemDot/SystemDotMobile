@@ -105,8 +105,14 @@
     <Compile Include="..\SystemDot.Mobile.iOS\Configuration\IocContainerExtensions.cs">
       <Link>Configuration\IocContainerExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\SystemDot.Mobile.iOS\Throttling\Throttler.cs">
-      <Link>Throttling\Throttler.cs</Link>
+    <Compile Include="..\SystemDot.Mobile.iOS\Throttling\MainThreadMarshalledThrottle.cs">
+      <Link>Throttling\MainThreadMarshalledThrottle.cs</Link>
+    </Compile>
+    <Compile Include="..\SystemDot.Mobile.iOS\Throttling\Throttle.cs">
+      <Link>Throttling\Throttle.cs</Link>
+    </Compile>
+    <Compile Include="..\SystemDot.Mobile.iOS\Throttling\ThrottleFactory.cs">
+      <Link>Throttling\ThrottleFactory.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
