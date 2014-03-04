@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SystemDot.Domain.Commands;
 using SystemDot.Messaging.Handling.Actions;
 using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Throttling;
@@ -12,10 +13,14 @@ namespace SystemDot.Mobile.Mvvm
     {
         readonly IThrottleFactory throttleFactory;
         readonly List<IActionSubscriptionToken> tokens;
-        
-        public ViewModel(IThrottleFactory throttleFactory)
+
+        public ICommandBus CommandBus { get; private set; }
+
+        public ViewModel(IThrottleFactory throttleFactory, ICommandBus commandBus)
         {
             this.throttleFactory = throttleFactory;
+            CommandBus = commandBus;
+
             tokens = new List<IActionSubscriptionToken>();
         }
 
@@ -23,13 +28,6 @@ namespace SystemDot.Mobile.Mvvm
             Func<TViewModel, INotifyChange<TProperty>> property)
         {
             return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, throttleFactory);
-        }
-
-        protected void SendCommand<T>(Action<T> initaliseCommandAction) where T : new()
-        {
-            var command = new T();
-            initaliseCommandAction(command);
-            Messenger.Send(command);
         }
 
         protected void When<T>(Action<T> whenAction)
