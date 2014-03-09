@@ -16,10 +16,10 @@ namespace SystemDot.Mobile.Mvvm
 
         public ICommandBus CommandBus { get; private set; }
 
-        public ViewModel(IThrottleFactory throttleFactory, ICommandBus commandBus)
+        public ViewModel(ViewModelContext context)
         {
-            this.throttleFactory = throttleFactory;
-            CommandBus = commandBus;
+            throttleFactory = context.ThrottleFactory;
+            CommandBus = context.CommandBus;
 
             tokens = new List<IActionSubscriptionToken>();
         }

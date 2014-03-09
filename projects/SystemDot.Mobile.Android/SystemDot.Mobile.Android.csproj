@@ -86,24 +86,24 @@
     </Reference>
     <Reference Include="SystemDot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.1.2\lib\MonoAndroid\SystemDot.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.1.7\lib\MonoAndroid\SystemDot.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Android">
-      <HintPath>..\..\packages\SystemDotCore.1.1.2\lib\MonoAndroid\SystemDot.Android.dll</HintPath>
+    <Reference Include="SystemDot.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotCore.1.1.7\lib\MonoAndroid\SystemDot.Android.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Storage.Changes.Sql.Android">
-      <HintPath>..\..\packages\SystemDotCore.1.1.2\lib\MonoAndroid\SystemDot.Storage.Changes.Sql.Android.dll</HintPath>
+    <Reference Include="SystemDot.Storage.Changes.Sql.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotCore.1.1.7\lib\MonoAndroid\SystemDot.Storage.Changes.Sql.Android.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Storage.Changes.Sqlite.Android">
-      <HintPath>..\..\packages\SystemDotCore.1.1.2\lib\MonoAndroid\SystemDot.Storage.Changes.Sqlite.Android.dll</HintPath>
+    <Reference Include="SystemDot.Storage.Changes.Sqlite.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotCore.1.1.7\lib\MonoAndroid\SystemDot.Storage.Changes.Sqlite.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SystemDot.Mobile.iOS\Configuration\BuilderConfigurationExtensions.cs">
-      <Link>Configuration\BuilderConfigurationExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\SystemDot.Mobile.iOS\Configuration\IocContainerExtensions.cs">
-      <Link>Configuration\IocContainerExtensions.cs</Link>
+    <Compile Include="..\SystemDot.Mobile.iOS\Configuration\ConfigurationBuilderComponent.cs">
+      <Link>Configuration\ConfigurationBuilderComponent.cs</Link>
     </Compile>
     <Compile Include="..\SystemDot.Mobile.iOS\Throttling\MainThreadMarshalledThrottle.cs">
       <Link>Throttling\MainThreadMarshalledThrottle.cs</Link>
@@ -114,6 +114,7 @@
     <Compile Include="..\SystemDot.Mobile.iOS\Throttling\ThrottleFactory.cs">
       <Link>Throttling\ThrottleFactory.cs</Link>
     </Compile>
+    <Compile Include="Configuration\BuilderConfigurationExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

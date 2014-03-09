@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Configuration\BuilderConfigurationExtensions.cs" />
+    <Compile Include="Configuration\ConfigurationBuilderComponent.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
@@ -41,6 +43,7 @@
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ThrottleOptions.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
+    <Compile Include="Mvvm\ViewModelContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Throttling\IThrottle.cs" />
     <Compile Include="Throttling\IThrottleFactory.cs" />
@@ -65,19 +68,19 @@
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot">
-      <HintPath>..\..\packages\SystemDotCore.1.1.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.1.7\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Domain">
-      <HintPath>..\..\packages\SystemDotDomain.1.0.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing">
-      <HintPath>..\..\packages\SystemDotDomain.1.0.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing.InMemory">
-      <HintPath>..\..\packages\SystemDotDomain.1.0.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying">
-      <HintPath>..\..\packages\SystemDotDomain.1.0.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />
