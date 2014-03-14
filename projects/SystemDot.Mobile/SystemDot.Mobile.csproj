@@ -40,6 +40,7 @@
     <Compile Include="Ioc\CallbackList.cs" />
     <Compile Include="Ioc\MvxIocContainer.cs" />
     <Compile Include="Mvvm\InputChangeOptions.cs" />
+    <Compile Include="Mvvm\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ThrottleOptions.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
@@ -71,16 +72,16 @@
       <HintPath>..\..\packages\SystemDotCore.1.1.8\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Domain">
-      <HintPath>..\..\packages\SystemDotDomain.1.1.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing">
-      <HintPath>..\..\packages\SystemDotDomain.1.1.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing.InMemory">
-      <HintPath>..\..\packages\SystemDotDomain.1.1.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying">
-      <HintPath>..\..\packages\SystemDotDomain.1.1.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.1.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />
