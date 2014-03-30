@@ -3,3 +3,8 @@ C:\work\SDMobile\Build\SystemDot.Mobile.iOS.pdb
 C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.csprojResolveAssemblyReference.cache
 C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.dll
 C:\work\SDMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.csprojResolveAssemblyReference.cache
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.dll
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.iOS.dll
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.iOS.pdb

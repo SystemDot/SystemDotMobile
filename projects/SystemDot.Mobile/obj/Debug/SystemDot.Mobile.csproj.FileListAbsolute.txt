@@ -3,3 +3,8 @@ C:\work\SDMobile\Build\SystemDot.Mobile.pdb
 C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
 C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb
 C:\work\SDMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.dll
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.pdb
