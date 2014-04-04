@@ -8,3 +8,8 @@ E:\Work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile
 E:\Work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
 E:\Work\SystemDotMobile\Build\SystemDot.Mobile.iOS.dll
 E:\Work\SystemDotMobile\Build\SystemDot.Mobile.iOS.pdb
+C:\work\SystemDotMobile\Build\SystemDot.Mobile.iOS.dll
+C:\work\SystemDotMobile\Build\SystemDot.Mobile.iOS.pdb
+C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.csprojResolveAssemblyReference.cache
+C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.dll
+C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
