@@ -14,6 +14,8 @@
     <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,26 +68,33 @@
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.2\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot">
       <HintPath>..\..\packages\SystemDotCore.1.2.5\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Domain">
-      <HintPath>..\..\packages\SystemDotDomain.1.2.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.2.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing">
-      <HintPath>..\..\packages\SystemDotDomain.1.2.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.2.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing.InMemory">
-      <HintPath>..\..\packages\SystemDotDomain.1.2.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.2.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying">
-      <HintPath>..\..\packages\SystemDotDomain.1.2.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.1.2.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
