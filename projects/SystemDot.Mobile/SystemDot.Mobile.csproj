@@ -44,6 +44,7 @@
     <Compile Include="Mvvm\InputChangeOptions.cs" />
     <Compile Include="Mvvm\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
+    <Compile Include="Mvvm\ExclusiveRunLock.cs" />
     <Compile Include="Mvvm\ThrottleOptions.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
     <Compile Include="Mvvm\ViewModelContext.cs" />
