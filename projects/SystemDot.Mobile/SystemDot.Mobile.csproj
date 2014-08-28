@@ -41,8 +41,10 @@
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
     <Compile Include="Ioc\MvxIocContainer.cs" />
+    <Compile Include="Mvvm\Notification\BooleanNotifyChange.cs" />
+    <Compile Include="Mvvm\Converters\InvertedBooleanValueConverter.cs" />
     <Compile Include="Mvvm\InputChangeOptions.cs" />
-    <Compile Include="Mvvm\NumericToStringConverter.cs" />
+    <Compile Include="Mvvm\Converters\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
     <Compile Include="Mvvm\ThrottleOptions.cs" />

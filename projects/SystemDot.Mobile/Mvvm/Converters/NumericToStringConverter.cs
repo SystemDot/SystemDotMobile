@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using Cirrious.CrossCore.Converters;
 
-namespace SystemDot.Mobile.Mvvm
+namespace SystemDot.Mobile.Mvvm.Converters
 {
     public class NumericToStringConverter<T> : MvxValueConverter<T, string>
     {
