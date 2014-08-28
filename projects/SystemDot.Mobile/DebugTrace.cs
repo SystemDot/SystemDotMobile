@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using Cirrious.CrossCore.Platform;
 
-namespace Rapidware.Mvx
+namespace SystemDot.Mobile
 {
     public class DebugTrace : IMvxTrace
     {

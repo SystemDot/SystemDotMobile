@@ -84,19 +84,19 @@
     <Reference Include="monotouch" />
     <Reference Include="SystemDot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.3.1\lib\MonoTouch\SystemDot.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.3.4\lib\MonoTouch\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.3.1\lib\MonoTouch\SystemDot.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.3.4\lib\MonoTouch\SystemDot.iOS.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Storage.Changes.Sql.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.3.1\lib\MonoTouch\SystemDot.Storage.Changes.Sql.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.3.4\lib\MonoTouch\SystemDot.Storage.Changes.Sql.iOS.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Storage.Changes.Sqlite.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.3.1\lib\MonoTouch\SystemDot.Storage.Changes.Sqlite.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.1.3.4\lib\MonoTouch\SystemDot.Storage.Changes.Sqlite.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
