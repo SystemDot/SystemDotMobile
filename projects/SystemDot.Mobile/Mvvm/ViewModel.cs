@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using SystemDot.Domain.Commands;
 using SystemDot.Messaging.Handling.Actions;
-using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Throttling;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -32,7 +31,7 @@ namespace SystemDot.Mobile.Mvvm
 
         protected void When<T>(Action<T> whenAction)
         {
-            tokens.Add(Messenger.RegisterHandler(whenAction));
+            tokens.Add(CommandBus.RegisterHandler(whenAction));
         }
     }
 }
