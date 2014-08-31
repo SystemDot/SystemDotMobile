@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using SystemDot.Domain.Commands;
+using SystemDot.Messaging;
 using SystemDot.Messaging.Handling.Actions;
-using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Throttling;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -14,12 +13,12 @@ namespace SystemDot.Mobile.Mvvm
         readonly IThrottleFactory throttleFactory;
         readonly List<IActionSubscriptionToken> tokens;
 
-        public ICommandBus CommandBus { get; private set; }
+        public IBus Bus { get; private set; }
 
         public ViewModel(ViewModelContext context)
         {
             throttleFactory = context.ThrottleFactory;
-            CommandBus = context.CommandBus;
+            Bus = context.Bus;
 
             tokens = new List<IActionSubscriptionToken>();
         }
@@ -32,7 +31,7 @@ namespace SystemDot.Mobile.Mvvm
 
         protected void When<T>(Action<T> whenAction)
         {
-            tokens.Add(Messenger.RegisterHandler(whenAction));
+            tokens.Add(Bus.RegisterHandler(whenAction));
         }
     }
 }
