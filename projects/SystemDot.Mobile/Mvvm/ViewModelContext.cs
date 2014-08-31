@@ -1,5 +1,4 @@
 using SystemDot.Domain.Commands;
-using SystemDot.Messaging;
 using SystemDot.Mobile.Throttling;
 
 namespace SystemDot.Mobile.Mvvm
@@ -7,12 +6,12 @@ namespace SystemDot.Mobile.Mvvm
     public class ViewModelContext
     {
         public IThrottleFactory ThrottleFactory { get; private set; }
-        public IBus Bus { get; private set; }
+        public ICommandBus CommandBus { get; private set; }
 
-        public ViewModelContext(IThrottleFactory throttleFactory, IBus bus)
+        public ViewModelContext(IThrottleFactory throttleFactory, ICommandBus commandBus)
         {
             ThrottleFactory = throttleFactory;
-            Bus = bus;
+            CommandBus = commandBus;
         }
     }
 }
