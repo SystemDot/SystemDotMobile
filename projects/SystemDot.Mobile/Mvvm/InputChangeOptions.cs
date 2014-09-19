@@ -1,14 +1,10 @@
 using System;
+using System.Threading.Tasks;
 using SystemDot.Mobile.Throttling;
 using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile.Mvvm
 {
-    public interface IInputChangeRunner
-    {
-        void Run(Action toRun);
-    }
-
     public class InputChangeOptions<TViewModel, TProperty> : 
         IInputChangeRunner 
         where TViewModel : ViewModel<TViewModel>
@@ -32,6 +28,13 @@ namespace SystemDot.Mobile.Mvvm
             property
                 .Invoke(model)
                 .Changed += (_, __) => toRun();
+        }
+
+        public virtual void RunInAsyncContext(Func<Task> toRun)
+        {
+            property
+                .Invoke(model)
+                .Changed += (_, __) => model.RunInAsyncContext(toRun);
         }
 
         public InputChangeOptions<TViewModel, TOrProperty> OrInputChangedFor<TOrProperty>(

@@ -1,5 +1,5 @@
 using System;
-using SystemDot.Core;
+using System.Threading.Tasks;
 
 namespace SystemDot.Mobile.Mvvm
 {
@@ -13,6 +13,15 @@ namespace SystemDot.Mobile.Mvvm
 
             isRunning = true;
             toRun();
+            isRunning = false;
+        }
+
+        public static async Task RunAsync(Func<Task> toRun)
+        {
+            if (isRunning) return;
+
+            isRunning = true;
+            await toRun();
             isRunning = false;
         }
     }

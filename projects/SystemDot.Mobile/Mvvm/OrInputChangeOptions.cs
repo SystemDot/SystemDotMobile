@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using SystemDot.Mobile.Throttling;
 using Cirrious.MvvmCross.FieldBinding;
 
@@ -24,6 +25,12 @@ namespace SystemDot.Mobile.Mvvm
         {
             parent.Run(toRun);
             base.Run(toRun);
+        }
+
+        public override void RunInAsyncContext(Func<Task> toRun)
+        {
+            parent.RunInAsyncContext(toRun);
+            base.RunInAsyncContext(toRun);
         }
     }
 }

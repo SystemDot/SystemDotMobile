@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using SystemDot.Domain.Commands;
 using SystemDot.Messaging.Handling.Actions;
 using SystemDot.Mobile.Throttling;
@@ -14,11 +15,13 @@ namespace SystemDot.Mobile.Mvvm
         readonly List<IActionSubscriptionToken> tokens;
 
         public ICommandBus CommandBus { get; private set; }
+        public CurrentRunningTask CurrentRunningTask { get; private set; }
 
         public ViewModel(ViewModelContext context)
         {
             throttleFactory = context.ThrottleFactory;
             CommandBus = context.CommandBus;
+            CurrentRunningTask = CurrentRunningTask.None;
 
             tokens = new List<IActionSubscriptionToken>();
         }
@@ -32,6 +35,12 @@ namespace SystemDot.Mobile.Mvvm
         protected void When<T>(Action<T> whenAction)
         {
             tokens.Add(CommandBus.RegisterHandler(whenAction));
+        }
+
+
+        public void RunInAsyncContext(Func<Task> toRun)
+        {
+            CurrentRunningTask = CurrentRunningTask.WithTask(toRun());
         }
     }
 }

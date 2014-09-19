@@ -41,6 +41,8 @@
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
     <Compile Include="Ioc\MvxIocContainer.cs" />
+    <Compile Include="Mvvm\CurrentRunningTask.cs" />
+    <Compile Include="Mvvm\IInputChangeRunner.cs" />
     <Compile Include="Mvvm\Notification\BooleanNotifyChange.cs" />
     <Compile Include="Mvvm\Converters\InvertedBooleanValueConverter.cs" />
     <Compile Include="Mvvm\InputChangeOptions.cs" />
