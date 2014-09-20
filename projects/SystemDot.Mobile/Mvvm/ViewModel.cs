@@ -15,19 +15,21 @@ namespace SystemDot.Mobile.Mvvm
         readonly List<IActionSubscriptionToken> tokens;
 
         public ICommandBus CommandBus { get; private set; }
+
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
         public ViewModel(ViewModelContext context)
         {
             throttleFactory = context.ThrottleFactory;
             CommandBus = context.CommandBus;
-            CurrentRunningTask = CurrentRunningTask.None;
+            CurrentRunningTask = new CurrentRunningTask();
 
             tokens = new List<IActionSubscriptionToken>();
         }
 
         public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
-            Func<TViewModel, INotifyChange<TProperty>> property)
+            Func<TViewModel, 
+            INotifyChange<TProperty>> property)
         {
             return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, throttleFactory);
         }
@@ -37,10 +39,9 @@ namespace SystemDot.Mobile.Mvvm
             tokens.Add(CommandBus.RegisterHandler(whenAction));
         }
 
-
         public void RunInAsyncContext(Func<Task> toRun)
         {
-            CurrentRunningTask = CurrentRunningTask.WithTask(toRun());
+            CurrentRunningTask.RunInAsyncContext(toRun());
         }
     }
 }

@@ -5,10 +5,11 @@ namespace SystemDot.Mobile.Mvvm
 {
     public class CurrentRunningTask
     {
-        public readonly NotifyChange<CurrentRunningTaskStatus> Status = new NotifyChange<CurrentRunningTaskStatus>();
         Task task;
 
-        public void SetTask(Task toSet)
+        public readonly NotifyChange<CurrentRunningTaskStatus> Status = new NotifyChange<CurrentRunningTaskStatus>();
+
+        public void RunInAsyncContext(Task toSet)
         {
             Status.Value = CurrentRunningTaskStatus.Running;
             toSet.ContinueWith(_ =>
@@ -21,16 +22,8 @@ namespace SystemDot.Mobile.Mvvm
 
         public void WaitForCompletion()
         {
-            if (task == null)
-                return;
+            if (task == null) return;
             task.Wait();
         }
-    }
-
-    public enum CurrentRunningTaskStatus
-    {
-        NotRunning,
-        Running,
-        Finished
     }
 }
