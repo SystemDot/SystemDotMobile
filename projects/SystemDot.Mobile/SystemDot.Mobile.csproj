@@ -99,25 +99,25 @@
       <HintPath>..\..\packages\SystemDotCore.1.5.7\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.AzureMobile">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.AzureMobile.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.AzureMobile.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Domain">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.EventSourcing.InMemory">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.EventSourcing.InMemory.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying.AzureMobile">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.AzureMobile.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.AzureMobile.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Querying.InMemory">
-      <HintPath>..\..\packages\SystemDotDomain.2.0.6-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.InMemory.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.2.0.7-beta\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Querying.InMemory.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />
