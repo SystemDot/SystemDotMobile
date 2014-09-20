@@ -1,26 +1,36 @@
 using System.Threading.Tasks;
+using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile.Mvvm
 {
     public class CurrentRunningTask
     {
-        readonly Task task;
+        public readonly NotifyChange<CurrentRunningTaskStatus> Status = new NotifyChange<CurrentRunningTaskStatus>();
+        Task task;
 
-        public static CurrentRunningTask WithTask(Task task)
+        public void SetTask(Task toSet)
         {
-            return new CurrentRunningTask(task);
-        }
-
-        public static CurrentRunningTask None { get { return new CurrentRunningTask(null); } }
-
-        CurrentRunningTask(Task task)
-        {
-            this.task = task;
+            Status.Value = CurrentRunningTaskStatus.Running;
+            toSet.ContinueWith(_ =>
+            {
+                Status.Value = CurrentRunningTaskStatus.Finished;
+                Status.Value = CurrentRunningTaskStatus.NotRunning;
+            });
+            task = toSet;
         }
 
         public void WaitForCompletion()
         {
-            if(task != null) task.Wait();
+            if (task == null)
+                return;
+            task.Wait();
         }
+    }
+
+    public enum CurrentRunningTaskStatus
+    {
+        NotRunning,
+        Running,
+        Finished
     }
 }
