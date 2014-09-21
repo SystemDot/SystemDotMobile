@@ -1,24 +1,18 @@
 using System;
-using SystemDot.Core;
-using Android.OS;
+using SystemDot.Mobile.Mvvm;
 using Android.Views;
-using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile
 {
-    public abstract class ActionBarActivity<TViewModel> : MvxActivity
+    public abstract class ActionBarActivity<TViewModel> : TypedViewModelActivity<TViewModel> 
+        where TViewModel : ViewModel<TViewModel>
     {
         readonly int menuLayoutId;
         readonly int layoutId;
-        Func<TViewModel, INotifyChange> menuInvalidatorAction;
-
-        protected TViewModel TypedViewModel
-        {
-            get { return ViewModel.As<TViewModel>(); }
-        }
-
-        protected ActionBarActivity(int layoutId, int menuLayoutId)
+        readonly Func<TViewModel, INotifyChange> menuInvalidatorAction;
+        
+        protected ActionBarActivity(int layoutId, int menuLayoutId) : base(layoutId)
         {
             this.menuLayoutId = menuLayoutId;
             this.layoutId = layoutId;
@@ -30,10 +24,8 @@ namespace SystemDot.Mobile
             this.menuInvalidatorAction = menuInvalidatorAction;
         }
 
-        protected override void OnCreate(Bundle bundle)
+        protected override void AfterInitialContentSetup()
         {
-            base.OnCreate(bundle);
-            SetContentView(layoutId);
             SetMenuInvalidator();
             AfterContentSetup();
         }

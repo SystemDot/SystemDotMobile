@@ -123,6 +123,7 @@
     <Compile Include="Configuration\BuilderConfigurationExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="TypedViewModelActivity.cs" />
     <Compile Include="Typefacing\ContextExtensions.cs" />
     <Compile Include="Typefacing\TypefacedButton.cs" />
     <Compile Include="Typefacing\TypefacedTextView.cs" />
