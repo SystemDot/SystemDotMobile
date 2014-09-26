@@ -1,13 +1,13 @@
-using SystemDot.Configuration;
+﻿using SystemDot.Configuration;
+using SystemDot.Mobile.Throttling;
 
 namespace SystemDot.Mobile.Configuration
 {
     public static class BuilderConfigurationExtensions
     {
-        public static BuilderConfiguration UseiOSMobile(this BuilderConfiguration config)
+        public static BuilderConfiguration UseMobile(this BuilderConfiguration config)
         {
-            config.UseMobile();
-            return config;
+            return config.RegisterBuildAction(c => c.RegisterInstance<IThrottleFactory, ThrottleFactory>());
         }
-    }
+    } 
 }

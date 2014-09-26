@@ -1,5 +1,4 @@
 ﻿using SystemDot.Configuration;
-using SystemDot.Ioc;
 using SystemDot.Mobile.Mvvm;
 
 namespace SystemDot.Mobile.Configuration
@@ -8,7 +7,7 @@ namespace SystemDot.Mobile.Configuration
     {
         public void Configure(ConfigurationBuilder builder)
         {
-            builder.RegisterBuildAction(c => c.RegisterFromAssemblyOf<ViewModelContext>());
+            builder.RegisterBuildAction(c => c.RegisterInstance<ViewModelContext, ViewModelContext>());
         }
     }
 }

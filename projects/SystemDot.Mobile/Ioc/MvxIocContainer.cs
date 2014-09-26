@@ -10,12 +10,13 @@ namespace SystemDot.Mobile.Ioc
     {
         readonly CallbackDictionary callbacks;
 
-        public static IIocContainer GetInnerContainer()
+        public static IocContainer InnerContainer
         {
-            return Instance.As<MvxIocContainer>().innerContainer;
+            get { return Instance.As<MvxIocContainer>().innerContainer; }
+            set { Instance.As<MvxIocContainer>().innerContainer = value; }
         }
 
-        readonly IocContainer innerContainer;
+        IocContainer innerContainer;
 
         public MvxIocContainer()
         {
@@ -85,6 +86,16 @@ namespace SystemDot.Mobile.Ioc
         {
             innerContainer.RegisterInstance<TFrom, TTo>();
             callbacks.CallBack<TFrom>();
+        }
+
+        public void RegisterType<TInterface>(Func<TInterface> constructor) where TInterface : class
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RegisterType(Type t, Func<object> constructor)
+        {
+            throw new NotImplementedException();
         }
 
         public void RegisterType(Type tFrom, Type tTo)

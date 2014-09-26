@@ -36,43 +36,60 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
     <Compile Include="Configuration\BuilderConfigurationExtensions.cs" />
-    <Compile Include="Configuration\ConfigurationBuilderComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Throttling\MainThreadMarshalledThrottle.cs" />
     <Compile Include="Throttling\Throttle.cs" />
     <Compile Include="Throttling\ThrottleFactory.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoTouch\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.CrossCore.Touch">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.Touch.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoTouch\Cirrious.CrossCore.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Touch">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.FieldBinding">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.FieldBinding.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.FieldBinding.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.FieldBinding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.FieldBinding.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.FieldBinding">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.FieldBinding.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.FieldBinding.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.FieldBinding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.FieldBinding.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Touch">
-      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.MethodBinding">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.MethodBinding.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.MethodBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Touch">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Visibility.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -84,19 +101,19 @@
     <Reference Include="monotouch" />
     <Reference Include="SystemDot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.5.8\lib\MonoTouch\SystemDot.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.2.0.3\lib\MonoTouch\SystemDot.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.5.8\lib\MonoTouch\SystemDot.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.2.0.3\lib\MonoTouch\SystemDot.iOS.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Storage.Changes.Sql.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.5.8\lib\MonoTouch\SystemDot.Storage.Changes.Sql.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.2.0.3\lib\MonoTouch\SystemDot.Storage.Changes.Sql.iOS.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Storage.Changes.Sqlite.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.1.5.8\lib\MonoTouch\SystemDot.Storage.Changes.Sqlite.iOS.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.2.0.3\lib\MonoTouch\SystemDot.Storage.Changes.Sqlite.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

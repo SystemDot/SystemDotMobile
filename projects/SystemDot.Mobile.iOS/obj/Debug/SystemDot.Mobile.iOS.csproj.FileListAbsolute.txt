@@ -14,3 +14,4 @@ C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile
 C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.dll
 C:\work\SystemDotMobile\projects\SystemDot.Mobile.iOS\obj\Debug\SystemDot.Mobile.iOS.pdb
 E:\Work\SystemDotMobile\Build\SystemDot.Mobile.iOS.dll.config
+C:\work\SystemDotMobile\Build\SystemDot.Mobile.iOS.dll.config
