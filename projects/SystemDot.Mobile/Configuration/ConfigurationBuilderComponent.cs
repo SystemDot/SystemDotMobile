@@ -8,6 +8,7 @@ namespace SystemDot.Mobile.Configuration
         public void Configure(ConfigurationBuilder builder)
         {
             builder.RegisterBuildAction(c => c.RegisterInstance<ViewModelContext, ViewModelContext>());
+            builder.RegisterBuildAction(c => c.RegisterInstance<ViewModelLocator, ViewModelLocator>());
         }
     }
 }
