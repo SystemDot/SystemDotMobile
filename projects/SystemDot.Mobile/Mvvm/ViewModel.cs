@@ -18,8 +18,10 @@ namespace SystemDot.Mobile.Mvvm
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
-        public ViewModel(ViewModelContext context)
+        protected ViewModel(ViewModelContext context, ViewModelLocator viewModelLocator)
         {
+            viewModelLocator.SetLocation(this);
+
             throttleFactory = context.ThrottleFactory;
             CommandBus = context.CommandBus;
             CurrentRunningTask = new CurrentRunningTask();

@@ -7,8 +7,8 @@ namespace SystemDot.Mobile.Mvvm
     {
         public readonly NotifyChange<string> ValidationMessage;
 
-        protected ValidatableViewModel(ViewModelContext context)
-            : base(context)
+        protected ValidatableViewModel(ViewModelContext context, ViewModelLocator viewModelLocator)
+            : base(context, viewModelLocator)
         {
             ValidationMessage = new NotifyChange<string>();
         }
