@@ -9,24 +9,26 @@ using Cirrious.MvvmCross.ViewModels;
 
 namespace SystemDot.Mobile.Mvvm
 {
-    public class ViewModel<TViewModel> : MvxViewModel where TViewModel : ViewModel<TViewModel>
+    public class ViewModel<TViewModel> : MvxViewModel 
+        where TViewModel : ViewModel<TViewModel>
     {
         readonly IThrottleFactory throttleFactory;
         readonly List<IActionSubscriptionToken> tokens;
 
         public ICommandBus CommandBus { get; private set; }
-
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
-        protected ViewModel(ViewModelContext context, ViewModelLocator viewModelLocator)
+        protected ViewModel(
+            IThrottleFactory throttleFactory, 
+            ViewModelLocator viewModelLocator, 
+            ICommandBus commandBus)
         {
-            viewModelLocator.SetLocation(this);
-
-            throttleFactory = context.ThrottleFactory;
-            CommandBus = context.CommandBus;
+            CommandBus = commandBus;
             CurrentRunningTask = new CurrentRunningTask();
 
+            this.throttleFactory = throttleFactory;
             tokens = new List<IActionSubscriptionToken>();
+            viewModelLocator.SetLocation(this);
         }
 
         public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(

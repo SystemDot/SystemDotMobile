@@ -40,6 +40,7 @@
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
     <Compile Include="Ioc\MvxIocContainer.cs" />
+    <Compile Include="Mvvm\CommandValidator.cs" />
     <Compile Include="Mvvm\CurrentRunningTask.cs" />
     <Compile Include="Mvvm\CurrentRunningTaskStatus.cs" />
     <Compile Include="Mvvm\IInputChangeRunner.cs" />
@@ -50,7 +51,9 @@
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
     <Compile Include="Mvvm\ThrottleOptions.cs" />
-    <Compile Include="Mvvm\ValidatableViewModel.cs" />
+    <Compile Include="Mvvm\Validation\ValidatableViewModel.cs" />
+    <Compile Include="Mvvm\Validation\ValidationFailed.cs" />
+    <Compile Include="Mvvm\Validation\ValidationPresenter.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
     <Compile Include="Mvvm\ViewModelContext.cs" />
     <Compile Include="Mvvm\ViewModelLocator.cs" />
