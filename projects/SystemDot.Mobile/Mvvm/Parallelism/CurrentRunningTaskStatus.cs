@@ -1,4 +1,4 @@
-namespace SystemDot.Mobile.Mvvm
+namespace SystemDot.Mobile.Mvvm.Parallelism
 {
     public enum CurrentRunningTaskStatus
     {

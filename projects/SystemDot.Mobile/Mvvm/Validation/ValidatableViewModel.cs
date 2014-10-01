@@ -7,15 +7,14 @@ namespace SystemDot.Mobile.Mvvm.Validation
     public abstract class ValidatableViewModel<TViewModel> : ViewModel<TViewModel>
         where TViewModel : ViewModel<TViewModel>
     {
-        public ValidationPresenter<TViewModel> ValidationPresenter;
+        public ValidationPresenter<TViewModel> ValidationPresenter { get; private set; }
+
         public readonly NotifyChange<string> ValidationMessage;
 
         protected ValidatableViewModel(
-            IThrottleFactory throttleFactory,
-            ViewModelLocator viewModelLocator,
-            ValidationPresenter<TViewModel> validationPresenter,
-            ICommandBus commandBus)
-            : base(throttleFactory, viewModelLocator, commandBus)
+            ViewModelContext context, 
+            ValidationPresenter<TViewModel> validationPresenter)
+            : base(context)
         {
             ValidationPresenter = validationPresenter;
             ValidationMessage = new NotifyChange<string>();

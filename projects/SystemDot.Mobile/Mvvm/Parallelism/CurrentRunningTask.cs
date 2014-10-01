@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Cirrious.MvvmCross.FieldBinding;
 
-namespace SystemDot.Mobile.Mvvm
+namespace SystemDot.Mobile.Mvvm.Parallelism
 {
     public class CurrentRunningTask
     {

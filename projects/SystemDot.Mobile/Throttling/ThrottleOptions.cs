@@ -1,7 +1,7 @@
 using System;
-using SystemDot.Mobile.Throttling;
+using SystemDot.Mobile.Mvvm;
 
-namespace SystemDot.Mobile.Mvvm
+namespace SystemDot.Mobile.Throttling
 {
     public class ThrottleOptions
     {

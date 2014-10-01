@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using SystemDot.Domain.Commands;
 using SystemDot.Messaging.Handling.Actions;
-using SystemDot.Mobile.Throttling;
+using SystemDot.Mobile.Mvvm.Parallelism;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
 
@@ -12,30 +12,27 @@ namespace SystemDot.Mobile.Mvvm
     public class ViewModel<TViewModel> : MvxViewModel 
         where TViewModel : ViewModel<TViewModel>
     {
-        readonly IThrottleFactory throttleFactory;
+        readonly ViewModelContext context;
         readonly List<IActionSubscriptionToken> tokens;
 
-        public ICommandBus CommandBus { get; private set; }
+        protected ICommandBus CommandBus { get { return context.CommandBus; } }
+
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
-        protected ViewModel(
-            IThrottleFactory throttleFactory, 
-            ViewModelLocator viewModelLocator, 
-            ICommandBus commandBus)
+        protected ViewModel(ViewModelContext context)
         {
-            CommandBus = commandBus;
+            this.context = context;
             CurrentRunningTask = new CurrentRunningTask();
-
-            this.throttleFactory = throttleFactory;
             tokens = new List<IActionSubscriptionToken>();
-            viewModelLocator.SetLocation(this);
+
+            context.ViewModelLocator.SetLocation(this);
         }
 
         public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
             Func<TViewModel, 
             INotifyChange<TProperty>> property)
         {
-            return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, throttleFactory);
+            return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, context.ThrottleFactory);
         }
 
         protected void When<T>(Action<T> whenAction)

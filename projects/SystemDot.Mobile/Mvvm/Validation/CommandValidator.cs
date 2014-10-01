@@ -1,9 +1,8 @@
 using System.Threading.Tasks;
 using SystemDot.Domain.Commands;
 using SystemDot.Domain.Events;
-using SystemDot.Mobile.Mvvm.Validation;
 
-namespace SystemDot.Mobile.Mvvm
+namespace SystemDot.Mobile.Mvvm.Validation
 {
     public abstract class CommandValidator<TCommand, TValidationFailedEvent> : IAsyncCommandHandler<TCommand>
         where TValidationFailedEvent : ValidationFailed, new()
