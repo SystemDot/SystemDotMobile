@@ -31,7 +31,7 @@ namespace SystemDot.Mobile.Mvvm.Validation
             GetViewModel().ValidationMessage.Value = messsage;
         }
 
-        TViewModel GetViewModel()
+        protected TViewModel GetViewModel()
         {
             return viewModelLocator.Locate<TViewModel>();
         }
