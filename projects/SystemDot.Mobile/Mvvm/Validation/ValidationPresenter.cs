@@ -4,13 +4,13 @@ using SystemDot.Core.Collections;
 namespace SystemDot.Mobile.Mvvm.Validation
 {
     public abstract class ValidationPresenter<TViewModel> 
-        where TViewModel : ViewModel<TViewModel>
+        where TViewModel : ValidatableViewModel<TViewModel>
     {
-        readonly ValidatableViewModel<TViewModel> viewModel;
+        readonly ViewModelLocator viewModelLocator;
 
-        protected ValidationPresenter(ValidatableViewModel<TViewModel> viewModel)
+        protected ValidationPresenter(ViewModelLocator viewModelLocator)
         {
-            this.viewModel = viewModel;
+            this.viewModelLocator = viewModelLocator;
         }
 
         public void Present(string message)
@@ -28,7 +28,12 @@ namespace SystemDot.Mobile.Mvvm.Validation
 
         void DisplayValidationMessage(string messsage)
         {
-            viewModel.ValidationMessage.Value = messsage;
+            GetViewModel().ValidationMessage.Value = messsage;
+        }
+
+        TViewModel GetViewModel()
+        {
+            return viewModelLocator.Locate<TViewModel>();
         }
     }
 }

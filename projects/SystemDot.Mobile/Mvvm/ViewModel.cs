@@ -15,7 +15,7 @@ namespace SystemDot.Mobile.Mvvm
         readonly ViewModelContext context;
         readonly List<IActionSubscriptionToken> tokens;
 
-        protected ICommandBus CommandBus { get { return context.CommandBus; } }
+        public ICommandBus CommandBus { get { return context.CommandBus; } }
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
