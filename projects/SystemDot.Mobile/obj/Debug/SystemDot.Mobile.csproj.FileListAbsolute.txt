@@ -5,3 +5,10 @@ C:\work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csp
 C:\work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
 C:\work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
 C:\work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.dll.config
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.dll
+E:\Work\SystemDotMobile\Build\SystemDot.Mobile.pdb
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csproj.App.config
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
+E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb

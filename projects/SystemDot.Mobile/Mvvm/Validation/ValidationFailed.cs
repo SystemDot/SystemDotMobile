@@ -22,7 +22,9 @@ namespace SystemDot.Mobile.Mvvm.Validation
 
         public ValidationFailed FailWith(string message)
         {
-            Messages.Add(message);
+            if(!Messages.Contains(message)) 
+                Messages.Add(message);
+
             return this;
         }
 

@@ -17,6 +17,9 @@ namespace SystemDot.Mobile.Mvvm
         public void SetLocation<TViewModel>(ViewModel<TViewModel> viewModel) 
             where TViewModel : ViewModel<TViewModel>
         {
+            if (viewModels.ContainsKey(typeof (TViewModel))) 
+                viewModels.Remove(typeof (TViewModel));
+
             viewModels.Add(typeof(TViewModel), viewModel);
         }
 
