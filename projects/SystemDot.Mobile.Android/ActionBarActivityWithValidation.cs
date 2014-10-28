@@ -1,5 +1,4 @@
 using System;
-using SystemDot.Mobile.Mvvm;
 using SystemDot.Mobile.Mvvm.Validation;
 using Android.Widget;
 using Cirrious.MvvmCross.FieldBinding;

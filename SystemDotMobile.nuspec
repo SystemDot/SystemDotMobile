@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>SystemDotMobile</id>
-        <version>1.9.3-beta</version>
+        <version>2.0.0-beta</version>
         <title>SystemDotMobile</title>
         <authors>Chris Sampson,James Goodenough</authors>
         <owners>Chris Sampson,James Goodenough</owners>
@@ -14,8 +14,12 @@
         <language>en-GB</language>
         <tags>MvvmCross, Mobile development, Cross Platform</tags>
         <dependencies>
-            <dependency id="SystemDotCore" version="2.0.10" />
-            <dependency id="SystemDotDomain" version="2.2.0-beta" />
+            <dependency id="SystemDotCore" version="3.0.1" />
+            <dependency id="SystemDotDomain" version="3.0.1" />
+            <dependency id="SystemDotIoc" version="1.0.1" />
+            <dependency id="SystemDotMessaging" version="1.0.2" />
+            <dependency id="SystemDotBootstrapping" version="1.0.3" />
+            <dependency id="SystemDotThreadMarshalling" version="1.0.2" />
             <dependency id="MvvmCross.HotTuna.CrossCore" version="3.2.1" />
             <dependency id="MvvmCross.HotTuna.MvvmCrossLibraries" version="3.2.1" />
             <dependency id="MvvmCross.HotTuna.Plugin.FieldBinding" version="3.2.1" />

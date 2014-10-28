@@ -12,3 +12,9 @@ E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csp
 E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
 E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
 E:\Work\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.dll.config
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.dll
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.pdb
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.csprojResolveAssemblyReference.cache
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.dll
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile\obj\Debug\SystemDot.Mobile.pdb

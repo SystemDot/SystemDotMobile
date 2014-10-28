@@ -39,7 +39,7 @@
     <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
-    <Compile Include="Configuration\BuilderConfigurationExtensions.cs" />
+    <Compile Include="Bootstrap\BootstrapBuilderConfigurationExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Throttling\MainThreadMarshalledThrottle.cs" />
     <Compile Include="Throttling\Throttle.cs" />
@@ -91,29 +91,33 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoTouch\Cirrious.MvvmCross.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="SystemDot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.2.0.10\lib\MonoTouch\SystemDot.dll</HintPath>
+    <Reference Include="SystemDot.Bootstrapping">
+      <HintPath>..\..\packages\SystemDotBootstrapping.1.0.3\lib\MonoTouch\SystemDot.Bootstrapping.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.2.0.10\lib\MonoTouch\SystemDot.iOS.dll</HintPath>
+    <Reference Include="SystemDot.Bootstrapping.iOS">
+      <HintPath>..\..\packages\SystemDotBootstrapping.1.0.3\lib\MonoTouch\SystemDot.Bootstrapping.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Storage.Changes.Sql.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.2.0.10\lib\MonoTouch\SystemDot.Storage.Changes.Sql.iOS.dll</HintPath>
+    <Reference Include="SystemDot.Core">
+      <HintPath>..\..\packages\SystemDotCore.3.0.1\lib\MonoTouch\SystemDot.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Storage.Changes.Sqlite.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\SystemDotCore.2.0.10\lib\MonoTouch\SystemDot.Storage.Changes.Sqlite.iOS.dll</HintPath>
+    <Reference Include="SystemDot.Ioc">
+      <HintPath>..\..\packages\SystemDotIoc.1.0.1\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection">
+      <HintPath>..\..\packages\SystemDotReflection.1.0.1\lib\MonoTouch\SystemDot.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection.iOS">
+      <HintPath>..\..\packages\SystemDotReflection.1.0.1\lib\MonoTouch\SystemDot.Reflection.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling">
+      <HintPath>..\..\packages\SystemDotThreadMarshalling.1.0.3\lib\MonoTouch\SystemDot.ThreadMarshalling.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling.iOS">
+      <HintPath>..\..\packages\SystemDotThreadMarshalling.1.0.3\lib\MonoTouch\SystemDot.ThreadMarshalling.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

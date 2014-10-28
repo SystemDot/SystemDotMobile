@@ -35,3 +35,16 @@ C:\work\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\android\bin\
 C:\work\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\res\values\attr_styleable.xml
 C:\work\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\R.cs.flag
 C:\work\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\uploadflags.txt
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android.dll.config
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android.dll
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android.pdb
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android.dll.mdb
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android.apk
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\Build\SystemDot.Mobile.Android-Signed.apk
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\SystemDot.Mobile.Android.csprojResolveAssemblyReference.cache
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\SystemDot.Mobile.Android.dll
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\SystemDot.Mobile.Android.pdb
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\android\bin\SystemDot.Mobile.Android.apk
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\res\values\attr_styleable.xml
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\R.cs.flag
+C:\Users\Chris.Sampson\Documents\GitHub\SystemDotMobile\projects\SystemDot.Mobile.Android\obj\Debug\uploadflags.txt
