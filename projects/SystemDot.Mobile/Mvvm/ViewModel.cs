@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SystemDot.Domain.Commands;
 using SystemDot.Messaging.Handling.Actions;
+using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Mvvm.Parallelism;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -14,8 +14,6 @@ namespace SystemDot.Mobile.Mvvm
     {
         readonly ViewModelContext context;
         readonly List<IActionSubscriptionToken> tokens;
-
-        public ICommandBus CommandBus { get { return context.CommandBus; } }
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }
 
@@ -37,7 +35,7 @@ namespace SystemDot.Mobile.Mvvm
 
         protected void When<T>(Action<T> whenAction)
         {
-            tokens.Add(CommandBus.RegisterHandler(whenAction));
+            tokens.Add(Messenger.RegisterHandler(whenAction));
         }
 
         public void RunInAsyncContext(Func<Task> toRun)

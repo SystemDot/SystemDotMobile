@@ -23,7 +23,7 @@ namespace SystemDot.Mobile
             TypedViewModel.ValidationMessage.Changed += ValidationMessage_Changed;
         }
 
-        void ValidationMessage_Changed(object sender, System.EventArgs e)
+        void ValidationMessage_Changed(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TypedViewModel.ValidationMessage.Value)) return;
 
