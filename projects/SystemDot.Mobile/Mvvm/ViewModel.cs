@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SystemDot.Messaging.Handling.Actions;
-using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Mvvm.Parallelism;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -35,7 +34,7 @@ namespace SystemDot.Mobile.Mvvm
 
         protected void When<T>(Action<T> whenAction)
         {
-            tokens.Add(Messenger.RegisterHandler(whenAction));
+            tokens.Add(context.Dispatcher.RegisterHandler(whenAction));
         }
 
         public void RunInAsyncContext(Func<Task> toRun)
