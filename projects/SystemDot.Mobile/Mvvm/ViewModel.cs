@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SystemDot.Messaging.Handling.Actions;
+using SystemDot.Messaging.Simple;
 using SystemDot.Mobile.Mvvm.Parallelism;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -15,6 +16,7 @@ namespace SystemDot.Mobile.Mvvm
         readonly List<IActionSubscriptionToken> tokens;
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }
+        public Dispatcher MessageDispatcher { get { return context.Dispatcher; } }
 
         protected ViewModel(ViewModelContext context)
         {
