@@ -1,4 +1,5 @@
 using System;
+using SystemDot.Mobile.Alerts;
 using SystemDot.Mobile.Mvvm.Validation;
 using Android.Widget;
 using Cirrious.MvvmCross.FieldBinding;
@@ -26,10 +27,7 @@ namespace SystemDot.Mobile
         void ValidationMessage_Changed(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TypedViewModel.ValidationMessage.Value)) return;
-
-            Toast
-                .MakeText(this, TypedViewModel.ValidationMessage.Value, ToastLength.Long)
-                .Show();
+            TypedViewModel.MessageDispatcher.Send(new AlertUser { Message = TypedViewModel.ValidationMessage.Value });
         }
     }
 }
