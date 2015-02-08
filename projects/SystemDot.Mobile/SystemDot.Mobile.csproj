@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppStarted.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Mvvm\Converters\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
+    <Compile Include="SystemDotMvxApplication.cs" />
     <Compile Include="Throttling\ThrottleOptions.cs" />
     <Compile Include="Mvvm\Validation\ValidatableViewModel.cs" />
     <Compile Include="Mvvm\Validation\ValidationFailed.cs" />
