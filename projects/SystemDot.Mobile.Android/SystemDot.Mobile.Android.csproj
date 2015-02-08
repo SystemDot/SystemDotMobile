@@ -163,11 +163,13 @@
     </Compile>
     <Compile Include="ActionBarActivityWithValidation.cs" />
     <Compile Include="ActionBarActivity.cs" />
+    <Compile Include="AppStarted.cs" />
     <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="SystemDotMvxApplication.cs" />
     <Compile Include="TypedViewModelActivity.cs" />
     <Compile Include="Typefacing\ContextExtensions.cs" />
     <Compile Include="Typefacing\TypefacedButton.cs" />
