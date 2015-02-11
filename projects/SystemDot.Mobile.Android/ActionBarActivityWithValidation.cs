@@ -27,7 +27,7 @@ namespace SystemDot.Mobile
         void ValidationMessage_Changed(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TypedViewModel.ValidationMessage.Value)) return;
-            TypedViewModel.MessageDispatcher.Send(new AlertUser { Message = TypedViewModel.ValidationMessage.Value });
+            TypedViewModel.Alert(TypedViewModel.ValidationMessage.Value);
         }
     }
 }
