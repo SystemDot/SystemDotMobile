@@ -14,6 +14,7 @@ namespace SystemDot.Mobile.Mvvm
         protected Service(Dispatcher dispatcher)
         {
             this.dispatcher = dispatcher;
+            tokens = new List<IActionSubscriptionToken>();
         }
 
         protected void Alert(string message)
