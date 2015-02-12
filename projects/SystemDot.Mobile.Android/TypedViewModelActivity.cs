@@ -17,11 +17,13 @@ namespace SystemDot.Mobile
         ProgressDialog ringProgressDialog;
         
         readonly int layoutId;
+        readonly int waitProgressStyle;
         ActionHandlerSubscriptionToken<AlertUser> alertHandlerToken;
 
-        protected TypedViewModelActivity(int layoutId)
+        protected TypedViewModelActivity(int layoutId, int waitProgressStyle)
         {
             this.layoutId = layoutId;
+            this.waitProgressStyle = waitProgressStyle;
         }
 
         protected TViewModel TypedViewModel
@@ -76,8 +78,10 @@ namespace SystemDot.Mobile
 
         void LaunchRingDialog()
         {
-            ringProgressDialog = ProgressDialog.Show(this, String.Empty, String.Empty, true);
+            ringProgressDialog = new ProgressDialog(this, waitProgressStyle);
             ringProgressDialog.SetCancelable(false);
+            ringProgressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            ringProgressDialog.Show();
         }
 
         protected virtual void AfterInitialContentSetup()

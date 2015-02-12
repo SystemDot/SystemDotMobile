@@ -11,15 +11,16 @@ namespace SystemDot.Mobile
         readonly int menuLayoutId;
         readonly int layoutId;
         readonly Func<TViewModel, INotifyChange> menuInvalidatorAction;
-        
-        protected ActionBarActivity(int layoutId, int menuLayoutId) : base(layoutId)
+
+        protected ActionBarActivity(int layoutId, int menuLayoutId, int waitProgressStyle)
+            : base(layoutId, waitProgressStyle)
         {
             this.menuLayoutId = menuLayoutId;
             this.layoutId = layoutId;
         }
 
-        protected ActionBarActivity(int layoutId, int menuLayoutId, Func<TViewModel, INotifyChange> menuInvalidatorAction)
-            : this(layoutId, menuLayoutId)
+        protected ActionBarActivity(int layoutId, int menuLayoutId, int waitProgressStyle, Func<TViewModel, INotifyChange> menuInvalidatorAction)
+            : this(layoutId, menuLayoutId, waitProgressStyle)
         {
             this.menuInvalidatorAction = menuInvalidatorAction;
         }

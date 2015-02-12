@@ -1,7 +1,5 @@
 using System;
-using SystemDot.Mobile.Alerts;
 using SystemDot.Mobile.Mvvm.Validation;
-using Android.Widget;
 using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile
@@ -9,13 +7,13 @@ namespace SystemDot.Mobile
     public abstract class ActionBarActivityWithValidation<TViewModel> : ActionBarActivity<TViewModel>
         where TViewModel : ValidatableViewModel<TViewModel>
     {
-        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId)
-            : base(layoutId, menuLayoutId)
+        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, int waitProgressStyle)
+            : base(layoutId, menuLayoutId, waitProgressStyle)
         {
         }
 
-        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, Func<TViewModel, INotifyChange> menuInvalidatorAction)
-            : base(layoutId, menuLayoutId, menuInvalidatorAction)
+        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, int waitProgressStyle, Func<TViewModel, INotifyChange> menuInvalidatorAction)
+            : base(layoutId, menuLayoutId, waitProgressStyle, menuInvalidatorAction)
         {
         }
 
