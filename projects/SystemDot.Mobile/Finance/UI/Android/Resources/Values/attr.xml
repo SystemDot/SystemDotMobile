@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <attr name="pickerStyle"></attr>
+  <attr name="incompletePickerStyle"></attr>
+  <attr name="invalidPickerStyle"></attr>
+  <attr name="completePickerStyle"></attr>
+  <attr name="pickerButtonStyle"></attr>
+  <attr name="fieldNameStyle"></attr>
+  <attr name="horizontalDividerStyle"></attr>
+  <attr name="calculatorButtonStyle"></attr>
+  <attr name="calculatorRowStyle"></attr>
+</resources>

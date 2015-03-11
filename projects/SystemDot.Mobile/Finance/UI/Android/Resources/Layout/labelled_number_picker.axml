@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="?android:attr/selectableItemBackground">
+  <systemdot.mobile.typefacing.TypefacedTextView
+    android:id="@+id/solver_number_picker_field"
+    style="?fieldNameStyle"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"/>
+  <systemdot.mobile.typefacing.TypefacedTextView
+    android:id="@+id/solver_number_complete_picker_value"
+    style="?completePickerStyle"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/solver_number_picker_field"
+    android:layout_centerHorizontal="true"/>
+  <systemdot.mobile.typefacing.TypefacedTextView
+    android:id="@+id/solver_number_incomplete_picker_value"
+    style="?incompletePickerStyle"
+    android:visibility="invisible"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/solver_number_picker_field"
+    android:layout_centerHorizontal="true"/>
+  <systemdot.mobile.typefacing.TypefacedTextView
+    android:id="@+id/solver_number_invalid_picker_value"
+    style="?invalidPickerStyle"
+    android:visibility="invisible"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/solver_number_picker_field"
+    android:layout_centerHorizontal="true"/>
+  <ImageButton 
+    style="?pickerButtonStyle"
+    android:layout_height="wrap_content"
+    android:visibility="invisible"
+    android:id="@+id/solver_number_picker_button"
+    android:layout_width="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"/>
+  <View
+    style="?horizontalDividerStyle"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/solver_number_incomplete_picker_value"/>
+</RelativeLayout>

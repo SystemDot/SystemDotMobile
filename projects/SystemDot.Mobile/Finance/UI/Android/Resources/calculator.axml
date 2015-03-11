@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+  android:layout_height="fill_parent"
+  android:layout_width="fill_parent"
+  android:columnCount="4"
+  android:rowCount="5">
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_minus"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_minus_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_plus"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_plus_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_all_clear"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_all_clear_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_clear"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_clear_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_one"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_one_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_two"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_two_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_three"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_three_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_times"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_times_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_four"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_four_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_five"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_five_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_six"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_six_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_divide"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_divide_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_seven"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_seven_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_eight"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_eight_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_nine"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_nine_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_equals"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_equals_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_period"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_period_text" />
+  <Rapidware.Financier.UI.Support.Android.Typefacing.TypefacedButton
+    android:id="@+id/calculator_zero"
+    style="?calculatorButtonStyle"
+    android:text="@string/calculator_zero_text" />
+  <Space />
+  <Space />
+  <View
+    style="?horizontalDividerStyle"
+    android:layout_gravity="fill_horizontal"
+    android:layout_columnSpan="4" />
+  <LinearLayout
+    style="?android:attr/buttonBarStyle"
+    android:layout_gravity="fill_horizontal"
+    android:layout_columnSpan="4"
+    android:orientation="horizontal"
+    android:paddingTop="0dip"
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip"
+    android:measureWithLargestChild="true">
+    <Button
+      android:id="@+id/calculator_cancel"
+      style="?android:attr/buttonBarButtonStyle"
+      android:layout_width="0dip"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/calculator_cancel_text" />
+    <Button
+      android:id="@+id/calculator_set"
+      style="?android:attr/buttonBarButtonStyle"
+      android:layout_width="0dip"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/calculator_set_text" />
+  </LinearLayout>
+</GridLayout>

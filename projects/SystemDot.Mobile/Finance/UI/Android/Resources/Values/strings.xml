@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="calculator_minus_text">-</string>
+  <string name="calculator_plus_text">+</string>
+  <string name="calculator_all_clear_text">AC</string>
+  <string name="calculator_clear_text">C</string>
+  <string name="calculator_one_text">1</string>
+  <string name="calculator_two_text">2</string>
+  <string name="calculator_three_text">3</string>
+  <string name="calculator_times_text">x</string>
+  <string name="calculator_four_text">4</string>
+  <string name="calculator_five_text">5</string>
+  <string name="calculator_six_text">6</string>
+  <string name="calculator_divide_text">/</string>
+  <string name="calculator_seven_text">7</string>
+  <string name="calculator_eight_text">8</string>
+  <string name="calculator_nine_text">9</string>
+  <string name="calculator_equals_text">=</string>
+  <string name="calculator_period_text">.</string>
+  <string name="calculator_zero_text">0</string>
+  <string name="calculator_set_text">Set</string>
+  <string name="calculator_cancel_text">Cancel</string>
+</resources>

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{938C74B4-E58C-48C2-B2A2-C1BD33572A97}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rapidware.Financier.Finance.UI.Android</RootNamespace>
+    <AssemblyName>Rapidware.Financier.Finance.UI.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <AndroidUseLatestPlatformSdk />
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Dialog.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Dialog.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid.FullFragging">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.FullFragging.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.FullFragging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.FieldBinding">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.FieldBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.FieldBinding">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.FieldBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.MethodBinding">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.MethodBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.MethodBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Core">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\CrossUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Droid">
+      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\CrossUI.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Bootstrapping">
+      <HintPath>..\..\Dependencies\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Bootstrapping.Android">
+      <HintPath>..\..\Dependencies\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotCore.3.3.0\lib\MonoAndroid\SystemDot.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotDomain.3.6.6\lib\MonoAndroid\SystemDot.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Domain.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotDomain.3.6.6\lib\MonoAndroid\SystemDot.Domain.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotMessaging.2.1.0\lib\MonoAndroid\SystemDot.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotMobile.3.1.0\lib\MonoAndroid\SystemDot.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Mobile.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotMobile.3.1.0\lib\MonoAndroid\SystemDot.Mobile.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotReflection.1.0.2\lib\MonoAndroid\SystemDot.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SystemDotReflection.1.0.2\lib\MonoAndroid\SystemDot.Reflection.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling">
+      <HintPath>..\..\Dependencies\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling.Android">
+      <HintPath>..\..\Dependencies\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\Calculating\CalculationPart.cs" />
+    <Compile Include="Views\Calculating\CalculationPartList.cs" />
+    <Compile Include="Views\Calculating\CalculationSequence.cs" />
+    <Compile Include="Views\Calculating\CalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Calculator.cs" />
+    <Compile Include="Views\Calculating\CalculatorDialog.cs" />
+    <Compile Include="Views\Calculating\Decimal\DecimalCalculator.cs" />
+    <Compile Include="Views\Calculating\Decimal\DecimalCalculatorDialog.cs" />
+    <Compile Include="Views\Calculating\ErrorPart.cs" />
+    <Compile Include="Views\Calculating\Integer\IntegerCalculator.cs" />
+    <Compile Include="Views\Calculating\Integer\IntegerCalculatorDialog.cs" />
+    <Compile Include="Views\Calculating\Numbers\DecimalFullNumberPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\EmptyFullNumberPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\Fractional\FractionalNumericCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Numbers\Fractional\FractionalNumericPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\FullNumberPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\IntegerFullNumberPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\NumericCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Numbers\NumericPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\Period\PeriodPart.cs" />
+    <Compile Include="Views\Calculating\Numbers\Whole\WholeNumericCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Numbers\Whole\WholeNumericPart.cs" />
+    <Compile Include="Views\Calculating\Operations\Addition\AddCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Operations\Addition\AddPart.cs" />
+    <Compile Include="Views\Calculating\Operations\Division\DivideCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Operations\Division\DividePart.cs" />
+    <Compile Include="Views\Calculating\Operations\Multiplication\MultiplyCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Operations\Multiplication\MultiplyPart.cs" />
+    <Compile Include="Views\Calculating\Operations\OperationCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Operations\OperationPart.cs" />
+    <Compile Include="Views\Calculating\Operations\Subtraction\SubtractCalculationVisitor.cs" />
+    <Compile Include="Views\Calculating\Operations\Subtraction\SubtractPart.cs" />
+    <Compile Include="Views\Monetary\LabelledMoneyPicker.cs" />
+    <Compile Include="Views\Monetary\MoneyPicker.cs" />
+    <Compile Include="Views\Numbers\ContextExtensions.cs" />
+    <Compile Include="Views\Numbers\LabelledNumberPicker.cs" />
+    <Compile Include="Views\Numbers\NumberPicker.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Rates\LabelledRatePicker.cs" />
+    <Compile Include="Views\TimePeriods\LabelledMonthlyTermPicker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <AndroidResource Include="Resources\Layout\calculator.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\labelled_number_picker.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\attr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mvvm\SystemDot.Mobile.Finance.Mvvm.csproj">
+      <Project>{63B84F64-7930-4A56-9FCF-620E2FF35411}</Project>
+      <Name>SystemDot.Mobile.Finance.Mvvm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
