@@ -14,10 +14,10 @@
         <language>en-GB</language>
         <tags>MvvmCross, Mobile development, Cross Platform</tags>
         <dependencies>
-            <dependency id="SystemDotCore" version="3.0.1" />
-            <dependency id="SystemDotDomain" version="3.2.0" />
-            <dependency id="SystemDotIoc" version="1.0.3" />
-            <dependency id="SystemDotMessaging" version="1.0.2" />
+            <dependency id="SystemDotCore" version="3.3.0" />
+            <dependency id="SystemDotDomain" version="3.6.6" />
+            <dependency id="SystemDotIoc" version="1.2.0" />
+            <dependency id="SystemDotMessaging" version="2.1.0" />
             <dependency id="SystemDotBootstrapping" version="1.0.4" />
             <dependency id="SystemDotThreadMarshalling" version="1.0.3" />
             <dependency id="MvvmCross.HotTuna.CrossCore" version="3.2.1" />

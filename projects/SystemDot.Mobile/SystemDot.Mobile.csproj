@@ -45,7 +45,6 @@
     <Compile Include="Alerts\AlertUser.cs" />
     <Compile Include="Mvvm\DispatcherExtensions.cs" />
     <Compile Include="Mvvm\Service.cs" />
-    <Compile Include="Mvvm\Validation\CommandValidator.cs" />
     <Compile Include="Mvvm\Parallelism\CurrentRunningTask.cs" />
     <Compile Include="Mvvm\Parallelism\CurrentRunningTaskStatus.cs" />
     <Compile Include="Mvvm\IInputChangeRunner.cs" />
@@ -55,6 +54,7 @@
     <Compile Include="Mvvm\Converters\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
+    <Compile Include="Mvvm\Validation\CommandValidator.cs" />
     <Compile Include="Throttling\ThrottleOptions.cs" />
     <Compile Include="Mvvm\Validation\ValidatableViewModel.cs" />
     <Compile Include="Mvvm\Validation\ValidationPresenter.cs" />
@@ -94,16 +94,16 @@
       <HintPath>..\..\packages\SystemDotBootstrapping.1.0.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Core">
-      <HintPath>..\..\packages\SystemDotCore.3.1.2\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Core.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotCore.3.3.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Core.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Domain">
-      <HintPath>..\..\packages\SystemDotDomain.3.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotDomain.3.6.6\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Ioc">
-      <HintPath>..\..\packages\SystemDotIoc.1.0.3\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
-      <HintPath>..\..\packages\SystemDotDomain.3.6.4\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Domain.dll</HintPath>
+      <HintPath>..\..\packages\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.Ioc">
+    <Reference Include="SystemDot.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Messaging">
