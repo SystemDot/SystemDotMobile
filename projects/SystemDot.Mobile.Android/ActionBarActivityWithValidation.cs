@@ -1,6 +1,5 @@
 using System;
 using SystemDot.Mobile.Mvvm.Validation;
-using Android.Widget;
 using Cirrious.MvvmCross.FieldBinding;
 
 namespace SystemDot.Mobile
@@ -8,13 +7,13 @@ namespace SystemDot.Mobile
     public abstract class ActionBarActivityWithValidation<TViewModel> : ActionBarActivity<TViewModel>
         where TViewModel : ValidatableViewModel<TViewModel>
     {
-        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId)
-            : base(layoutId, menuLayoutId)
+        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, int waitProgressStyle)
+            : base(layoutId, menuLayoutId, waitProgressStyle)
         {
         }
 
-        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, Func<TViewModel, INotifyChange> menuInvalidatorAction)
-            : base(layoutId, menuLayoutId, menuInvalidatorAction)
+        protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, int waitProgressStyle, Func<TViewModel, INotifyChange> menuInvalidatorAction)
+            : base(layoutId, menuLayoutId, waitProgressStyle, menuInvalidatorAction)
         {
         }
 
@@ -23,13 +22,10 @@ namespace SystemDot.Mobile
             TypedViewModel.ValidationMessage.Changed += ValidationMessage_Changed;
         }
 
-        void ValidationMessage_Changed(object sender, System.EventArgs e)
+        void ValidationMessage_Changed(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TypedViewModel.ValidationMessage.Value)) return;
-
-            Toast
-                .MakeText(this, TypedViewModel.ValidationMessage.Value, ToastLength.Long)
-                .Show();
+            TypedViewModel.Alert(TypedViewModel.ValidationMessage.Value);
         }
     }
 }

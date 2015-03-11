@@ -9,5 +9,5 @@ namespace SystemDot.Mobile.Bootstrap
         {
             return config.RegisterBuildAction(c => c.RegisterInstance<IThrottleFactory, ThrottleFactory>());
         }
-    } 
+    }
 }
