@@ -41,127 +41,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Dialog.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Dialog.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid.FullFragging">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.FullFragging.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.FullFragging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.FieldBinding">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.FieldBinding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.FieldBinding">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.FieldBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.FieldBinding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.MethodBinding">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.MethodBinding.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.MethodBinding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Plugin.Visibility.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Core">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\CrossUI.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="CrossUI.Droid">
-      <HintPath>..\..\Dependencies\MvvmCross.HotTuna.Droid.Dialog.3.2.1\lib\MonoAndroid\CrossUI.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Android" />
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Bootstrapping">
-      <HintPath>..\..\Dependencies\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Bootstrapping.Android">
-      <HintPath>..\..\Dependencies\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotCore.3.3.0\lib\MonoAndroid\SystemDot.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotDomain.3.6.6\lib\MonoAndroid\SystemDot.Domain.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Domain.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotDomain.3.6.6\lib\MonoAndroid\SystemDot.Domain.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotMessaging.2.1.0\lib\MonoAndroid\SystemDot.Messaging.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotMobile.3.1.0\lib\MonoAndroid\SystemDot.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Mobile.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotMobile.3.1.0\lib\MonoAndroid\SystemDot.Mobile.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Reflection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotReflection.1.0.2\lib\MonoAndroid\SystemDot.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.Reflection.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\SystemDotReflection.1.0.2\lib\MonoAndroid\SystemDot.Reflection.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.ThreadMarshalling">
-      <HintPath>..\..\Dependencies\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.ThreadMarshalling.Android">
-      <HintPath>..\..\Dependencies\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.Android.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Views\Calculating\CalculationPart.cs" />
     <Compile Include="Views\Calculating\CalculationPartList.cs" />
     <Compile Include="Views\Calculating\CalculationSequence.cs" />
@@ -206,13 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
     <AndroidResource Include="Resources\Layout\calculator.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\labelled_number_picker.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\attr.xml" />
@@ -221,10 +100,58 @@
     <AndroidResource Include="Resources\Values\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Mvvm\SystemDot.Mobile.Finance.Mvvm.csproj">
-      <Project>{63B84F64-7930-4A56-9FCF-620E2FF35411}</Project>
-      <Name>SystemDot.Mobile.Finance.Mvvm</Name>
-    </ProjectReference>
+    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Bootstrapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Bootstrapping.Android">
+      <HintPath>..\..\packages\SystemDotBootstrapping.1.0.4\lib\MonoAndroid\SystemDot.Bootstrapping.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotCore.3.1.2\lib\MonoAndroid\SystemDot.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotDomain.3.6.4\lib\MonoAndroid\SystemDot.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Domain.Android">
+      <HintPath>..\..\packages\SystemDotDomain.3.6.4\lib\MonoAndroid\SystemDot.Domain.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotMessaging.2.1.0\lib\MonoAndroid\SystemDot.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotReflection.1.0.1\lib\MonoAndroid\SystemDot.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Reflection.Android">
+      <HintPath>..\..\packages\SystemDotReflection.1.0.1\lib\MonoAndroid\SystemDot.Reflection.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.ThreadMarshalling.Android">
+      <HintPath>..\..\packages\SystemDotThreadMarshalling.1.0.3\lib\MonoAndroid\SystemDot.ThreadMarshalling.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

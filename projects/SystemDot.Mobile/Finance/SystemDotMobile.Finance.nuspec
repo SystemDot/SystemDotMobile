@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>SystemDotMobile.Finance</id>
-        <version>1.0.0-beta</version>
+        <version>1.0.0</version>
         <title>SystemDotMobile.Finance</title>
         <authors>Chris Sampson,James Goodenough</authors>
         <owners>Chris Sampson,James Goodenough</owners>
         <projectUrl>https://github.com/SystemDot/SystemDotMobile</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Mobile UI library for cross platform development on iOS, Android, WinRT and Windows</description>
-        <summary>Mobile UI library for cross platform development on iOS, Android, WinRT and Windows</summary>
-        <copyright>SystemDot 2014</copyright>
+        <description>Finance specific UI component library for cross platform development on iOS, Android, WinRT and Windows</description>
+        <summary>Finance specific UI component library for cross platform development on iOS, Android, WinRT and Windows</summary>
+        <copyright>SystemDot 2015</copyright>
         <language>en-GB</language>
         <tags>MvvmCross, Mobile development, Cross Platform</tags>
         <dependencies>
