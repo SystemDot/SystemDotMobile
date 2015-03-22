@@ -46,6 +46,7 @@
     <Compile Include="Mvvm\Navigation\MvxViewModelNavigator.cs" />
     <Compile Include="Alerts\AlertUser.cs" />
     <Compile Include="Mvvm\DispatcherExtensions.cs" />
+    <Compile Include="Mvvm\Notification\StringNotifyChange.cs" />
     <Compile Include="Mvvm\Service.cs" />
     <Compile Include="Mvvm\Parallelism\CurrentRunningTask.cs" />
     <Compile Include="Mvvm\Parallelism\CurrentRunningTaskStatus.cs" />
