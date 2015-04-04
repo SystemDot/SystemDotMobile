@@ -1,16 +1,9 @@
-using Cirrious.MvvmCross.FieldBinding;
-
 namespace SystemDot.Mobile.Mvvm.Validation
 {
-    public abstract class ValidatableViewModel<TViewModel> : ViewModel<TViewModel>
-        where TViewModel : ViewModel<TViewModel>
-    {
-        public readonly NotifyChange<string> ValidationMessage;
+    using SystemDot.Mobile.Mvvm.Notification;
 
-        protected ValidatableViewModel(ViewModelContext context)
-            : base(context)
-        {
-            ValidationMessage = new NotifyChange<string>();
-        }
+    public interface ValidatableViewModel
+    {
+        StringNotifyChange GetValidationMessage();
     }
 }

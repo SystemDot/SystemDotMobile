@@ -46,6 +46,7 @@
     <Compile Include="Mvvm\Navigation\MvxViewModelNavigator.cs" />
     <Compile Include="Alerts\AlertUser.cs" />
     <Compile Include="Mvvm\DispatcherExtensions.cs" />
+    <Compile Include="Mvvm\Notification\GuidNotifyChange.cs" />
     <Compile Include="Mvvm\Notification\StringNotifyChange.cs" />
     <Compile Include="Mvvm\Service.cs" />
     <Compile Include="Mvvm\Parallelism\CurrentRunningTask.cs" />
@@ -57,10 +58,8 @@
     <Compile Include="Mvvm\Converters\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
-    <Compile Include="Mvvm\Validation\CommandValidator.cs" />
     <Compile Include="Throttling\ThrottleOptions.cs" />
     <Compile Include="Mvvm\Validation\ValidatableViewModel.cs" />
-    <Compile Include="Mvvm\Validation\ValidationPresenter.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
     <Compile Include="Mvvm\ViewModelContext.cs" />
     <Compile Include="Mvvm\ViewModelLocator.cs" />

@@ -6,8 +6,12 @@ namespace SystemDot.Mobile.Mvvm.Notification
 
     public class BooleanNotifyChange : NotifyChange<bool>
     {
-         public BooleanNotifyChange(Action<bool> onChanged)
+        public BooleanNotifyChange(Action<bool> onChanged)
             : base(false, onChanged)
+        {
+        }
+        
+        public BooleanNotifyChange() : base(false)
         {
         }
     }

@@ -9,5 +9,9 @@ namespace SystemDot.Mobile.Mvvm.Notification
             : base(string.Empty, onChanged)
         {
         }
+
+        public StringNotifyChange() : base(string.Empty)
+        {
+        }
     }
 }
