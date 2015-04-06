@@ -1,13 +1,11 @@
-using System;
-using SystemDot.Mobile.Mvvm.Validation;
-using Cirrious.MvvmCross.FieldBinding;
-
 namespace SystemDot.Mobile
 {
-    using SystemDot.Mobile.Mvvm;
+    using System;
+    using SystemDot.Mobile.Mvvm.Validation;
+    using Cirrious.MvvmCross.FieldBinding;
 
     public abstract class ActionBarActivityWithValidation<TViewModel> : ActionBarActivity<TViewModel>
-        where TViewModel : ViewModel<TViewModel>, ValidatableViewModel
+        where TViewModel : ValidatableViewModel<TViewModel>
     {
         protected ActionBarActivityWithValidation(int layoutId, int menuLayoutId, int waitProgressStyle)
             : base(layoutId, menuLayoutId, waitProgressStyle)
@@ -21,13 +19,13 @@ namespace SystemDot.Mobile
 
         protected override void AfterContentSetup()
         {
-            TypedViewModel.GetValidationMessage().Changed += ValidationMessage_Changed;
+            TypedViewModel.ValidationMessage.Changed += ValidationMessage_Changed;
         }
 
         void ValidationMessage_Changed(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TypedViewModel.GetValidationMessage().Value)) return;
-            TypedViewModel.Alert(TypedViewModel.GetValidationMessage().Value);
+            if (string.IsNullOrEmpty(TypedViewModel.ValidationMessage.Value)) return;
+            TypedViewModel.Alert(TypedViewModel.ValidationMessage.Value);
         }
     }
 }
