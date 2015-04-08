@@ -12,11 +12,17 @@ namespace SystemDot.Mobile.Mvvm.Parallelism
         public void RunInAsyncContext(Task toSet)
         {
             Status.Value = CurrentRunningTaskStatus.Running;
-            toSet.ContinueWith(_ =>
-            {
-                Status.Value = CurrentRunningTaskStatus.Finished;
-                Status.Value = CurrentRunningTaskStatus.NotRunning;
-            });
+
+            toSet
+                .ContinueWith(t =>
+                {
+                    Status.Value = CurrentRunningTaskStatus.Finished;
+                    Status.Value = CurrentRunningTaskStatus.NotRunning;
+                })
+            .ContinueWith(t => 
+                t.Exception.Handle(ex => { throw ex; }), 
+                TaskContinuationOptions.OnlyOnFaulted);
+
             task = toSet;
         }
 
