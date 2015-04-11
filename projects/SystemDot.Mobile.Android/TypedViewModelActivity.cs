@@ -43,6 +43,7 @@ namespace SystemDot.Mobile
         protected override void OnResume()
         {
             TypedViewModel.Resume();
+            base.OnResume();
         }
 
         void RegisterAlertHandling()
