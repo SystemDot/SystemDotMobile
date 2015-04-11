@@ -40,6 +40,11 @@ namespace SystemDot.Mobile
             AfterInitialContentSetup();
         }
 
+        protected override void OnResume()
+        {
+            TypedViewModel.Resume();
+        }
+
         void RegisterAlertHandling()
         {
             alertHandlerToken = TypedViewModel

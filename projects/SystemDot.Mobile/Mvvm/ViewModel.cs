@@ -15,6 +15,7 @@ namespace SystemDot.Mobile.Mvvm
     {
         readonly ViewModelContext context;
         readonly List<IActionSubscriptionToken> tokens;
+        bool started;
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }       
         
@@ -47,6 +48,21 @@ namespace SystemDot.Mobile.Mvvm
             initialiseEvent(message);
             RunInAsyncContext(() => context.Dispatcher.SendAsync(message));
         }
+
+        public void Resume()
+        {
+            if (!started) LoadData();
+            started = false;
+        }
+
+        public override void Start()
+        {
+            started = true;
+            LoadData();
+            base.Start();
+        }
+
+        protected abstract void LoadData();
 
         public void Alert(string message)
         {
