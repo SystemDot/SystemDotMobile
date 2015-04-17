@@ -50,10 +50,10 @@ namespace SystemDot.Mobile.Mvvm
 
         public void Resume()
         {
-            LoadData();
+            RunInAsyncContext(LoadDataAsync);
         }
 
-        protected abstract void LoadData();
+        protected abstract Task LoadDataAsync();
 
         public void Alert(string message)
         {
