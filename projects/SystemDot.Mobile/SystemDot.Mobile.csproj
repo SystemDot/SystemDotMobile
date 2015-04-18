@@ -35,6 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Alerts\Email.cs" />
+    <Compile Include="Alerts\IEmailViewNavigator.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />

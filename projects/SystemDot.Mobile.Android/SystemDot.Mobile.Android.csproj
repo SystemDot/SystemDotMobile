@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="ActionBarActivityWithValidation.cs" />
     <Compile Include="ActionBarActivity.cs" />
+    <Compile Include="Alerts\EmailViewNavigator.cs" />
     <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
