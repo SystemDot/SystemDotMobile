@@ -36,19 +36,29 @@ namespace SystemDot.Mobile.Mvvm
             return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, context.ThrottleFactory);
         }
 
-        protected void Raise<T>() where T : new()
+        protected void RaiseInAsyncContext<T>() where T : new()
         {
-            Raise<T>(m => { });
+            RaiseInAsyncContext<T>(m => { });
         }
 
-        protected void Raise<T>(Action<T> initialiseEvent) where T : new()
+        protected void RaiseInAsyncContext<T>(Action<T> initialiseEvent) where T : new()
         {
             var message = new T();
             initialiseEvent(message);
             RunInAsyncContext(() => context.Dispatcher.SendAsync(message));
         }
 
-        public void Resume()
+        protected void SendCommandInAsyncContext<TCommand>(TCommand toSend)
+        {
+            RunInAsyncContext(() => context.CommandBus.SendCommandAsync(toSend));
+        }
+
+        protected void SendCommandInAsyncContext<TCommand>(Action<TCommand> initaliseCommandAction) where TCommand : new()
+        {
+            RunInAsyncContext(() => context.CommandBus.SendCommandAsync(initaliseCommandAction));
+        }
+
+        public void ResumeInAsyncContext()
         {
             RunInAsyncContext(LoadDataAsync);
         }

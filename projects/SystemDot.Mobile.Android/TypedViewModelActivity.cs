@@ -42,7 +42,7 @@ namespace SystemDot.Mobile
 
         protected override void OnResume()
         {
-            TypedViewModel.Resume();
+            TypedViewModel.ResumeInAsyncContext();
             base.OnResume();
         }
 
