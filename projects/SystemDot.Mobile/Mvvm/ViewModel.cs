@@ -17,7 +17,6 @@ namespace SystemDot.Mobile.Mvvm
         readonly List<IActionSubscriptionToken> tokens;
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }       
-        
         public Dispatcher MessageDispatcher { get { return context.Dispatcher; } }
 
         protected ViewModel(ViewModelContext context)
@@ -36,24 +35,24 @@ namespace SystemDot.Mobile.Mvvm
             return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, context.ThrottleFactory);
         }
 
-        protected void RaiseInAsyncContext<T>() where T : new()
+        public void RaiseInAsyncContext<T>() where T : new()
         {
             RaiseInAsyncContext<T>(m => { });
         }
 
-        protected void RaiseInAsyncContext<T>(Action<T> initialiseEvent) where T : new()
+        public void RaiseInAsyncContext<T>(Action<T> initialiseEvent) where T : new()
         {
             var message = new T();
             initialiseEvent(message);
             RunInAsyncContext(() => context.Dispatcher.SendAsync(message));
         }
 
-        protected void SendCommandInAsyncContext<TCommand>(TCommand toSend)
+        public void SendCommandInAsyncContext<TCommand>(TCommand toSend)
         {
             RunInAsyncContext(() => context.CommandBus.SendCommandAsync(toSend));
         }
 
-        protected void SendCommandInAsyncContext<TCommand>(Action<TCommand> initaliseCommandAction) where TCommand : new()
+        public void SendCommandInAsyncContext<TCommand>(Action<TCommand> initaliseCommandAction) where TCommand : new()
         {
             RunInAsyncContext(() => context.CommandBus.SendCommandAsync(initaliseCommandAction));
         }
@@ -70,7 +69,7 @@ namespace SystemDot.Mobile.Mvvm
             context.Dispatcher.SendAlert(message);
         }
 
-        protected void When<T>(Action<T> whenAction)
+        public void When<T>(Action<T> whenAction)
         {
             tokens.Add(context.Dispatcher.RegisterHandler(whenAction));
         }
