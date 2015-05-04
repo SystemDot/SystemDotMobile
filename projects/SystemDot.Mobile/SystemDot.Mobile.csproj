@@ -35,7 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Alerts\AlertUserHandler.cs" />
     <Compile Include="Alerts\Email.cs" />
+    <Compile Include="Alerts\IAlerter.cs" />
     <Compile Include="Alerts\IEmailViewNavigator.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Ioc\CallbackDictionary.cs" />
@@ -57,7 +59,6 @@
     <Compile Include="Mvvm\Notification\BooleanNotifyChange.cs" />
     <Compile Include="Mvvm\Converters\InvertedBooleanValueConverter.cs" />
     <Compile Include="Mvvm\InputChangeOptions.cs" />
-    <Compile Include="Mvvm\Converters\NumericToStringConverter.cs" />
     <Compile Include="Mvvm\OrInputChangeOptions.cs" />
     <Compile Include="Mvvm\ExclusiveRunLock.cs" />
     <Compile Include="Mvvm\Validation\EnumerableStringExtensions.cs" />

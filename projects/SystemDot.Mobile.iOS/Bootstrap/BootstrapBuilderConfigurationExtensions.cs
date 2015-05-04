@@ -11,6 +11,8 @@ namespace SystemDot.Mobile.Bootstrap
         {
             return config
                 .RegisterBuildAction(c => c.RegisterInstance<IThrottleFactory, ThrottleFactory>())
+                .RegisterBuildAction(c => c.RegisterInstance<AlertUserHandler, AlertUserHandler>())
+                .RegisterBuildAction(c => c.RegisterInstance<IAlerter, Alerter>())
                 .RegisterBuildAction(c => c.RegisterInstance<IEmailViewNavigator, EmailViewNavigator>());
         }
     }

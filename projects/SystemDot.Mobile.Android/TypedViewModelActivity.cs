@@ -1,12 +1,8 @@
-using System;
 using SystemDot.Core;
-using SystemDot.Messaging.Handling.Actions;
-using SystemDot.Mobile.Alerts;
 using SystemDot.Mobile.Mvvm;
 using SystemDot.Mobile.Mvvm.Parallelism;
 using Android.App;
 using Android.OS;
-using Android.Widget;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace SystemDot.Mobile
@@ -18,7 +14,6 @@ namespace SystemDot.Mobile
         
         readonly int layoutId;
         readonly int waitProgressStyle;
-        ActionHandlerSubscriptionToken<AlertUser> alertHandlerToken;
 
         protected TypedViewModelActivity(int layoutId, int waitProgressStyle)
         {
@@ -36,7 +31,6 @@ namespace SystemDot.Mobile
             base.OnCreate(bundle);
             SetContentView(layoutId);
             SetupProgressIndication();
-            RegisterAlertHandling();
             AfterInitialContentSetup();
         }
 
@@ -45,25 +39,7 @@ namespace SystemDot.Mobile
             TypedViewModel.ResumeInAsyncContext();
             base.OnResume();
         }
-
-        void RegisterAlertHandling()
-        {
-            alertHandlerToken = TypedViewModel
-                .MessageDispatcher
-                .RegisterHandler<AlertUser>(message => Toast.MakeText(this, message.Message, ToastLength.Long).Show());
-        }
-
-        protected override void OnDestroy()
-        {
-            UnregisterAlertHandling();
-            base.OnDestroy();
-        }
-
-        void UnregisterAlertHandling()
-        {
-            TypedViewModel.MessageDispatcher.UnregisterHandler(alertHandlerToken);
-        }
-
+        
         void SetupProgressIndication()
         {
             TypedViewModel.CurrentRunningTask.Status.Changed += (_, __) => OnTaskRunningChanged(TypedViewModel.CurrentRunningTask.Status.Value);

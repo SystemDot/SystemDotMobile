@@ -36,6 +36,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Alerts\Alerter.cs" />
     <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
@@ -110,6 +111,10 @@
     <Reference Include="SystemDot.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\SystemDotIoc.1.3.1\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\SystemDotMessaging.2.1.0\lib\MonoTouch\SystemDot.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="SystemDot.Reflection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
