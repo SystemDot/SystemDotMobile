@@ -64,6 +64,7 @@
     <Compile Include="Mvvm\Validation\EnumerableStringExtensions.cs" />
     <Compile Include="Mvvm\Validation\IInvalidatableInput.cs" />
     <Compile Include="Mvvm\Validation\ViewModelValidationPresenter.cs" />
+    <Compile Include="Mvvm\ViewModelCommand.cs" />
     <Compile Include="Throttling\ThrottleOptions.cs" />
     <Compile Include="Mvvm\Validation\ValidatableViewModel.cs" />
     <Compile Include="Mvvm\ViewModel.cs" />
