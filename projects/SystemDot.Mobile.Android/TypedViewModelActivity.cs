@@ -7,11 +7,13 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace SystemDot.Mobile
 {
+    using SystemDot.Mobile.Lifecycle;
+
     public abstract class TypedViewModelActivity<TViewModel> : MvxActivity
         where TViewModel : ViewModel<TViewModel>
     {
         ProgressDialog ringProgressDialog;
-        
+
         readonly int layoutId;
         readonly int waitProgressStyle;
 
@@ -24,6 +26,18 @@ namespace SystemDot.Mobile
         protected TViewModel TypedViewModel
         {
             get { return ViewModel.As<TViewModel>(); }
+        }
+
+        protected override void OnStart()
+        {
+            TypedViewModel.MessageDispatcher.Send(new ApplicationStarted());
+            base.OnStart();
+        }
+
+        protected override void OnRestart()
+        {
+            TypedViewModel.MessageDispatcher.Send(new ApplicationRestarted());
+            base.OnRestart();
         }
 
         protected override void OnCreate(Bundle bundle)
@@ -39,10 +53,17 @@ namespace SystemDot.Mobile
             TypedViewModel.ResumeInAsyncContext();
             base.OnResume();
         }
-        
+
+        protected override void OnStop()
+        {
+            TypedViewModel.MessageDispatcher.Send(new ApplicationStopped());
+            base.OnStop();
+        }
+
         void SetupProgressIndication()
         {
-            TypedViewModel.CurrentRunningTask.Status.Changed += (_, __) => OnTaskRunningChanged(TypedViewModel.CurrentRunningTask.Status.Value);
+            TypedViewModel.CurrentRunningTask.Status.Changed +=
+                (_, __) => OnTaskRunningChanged(TypedViewModel.CurrentRunningTask.Status.Value);
         }
 
         void OnTaskRunningChanged(CurrentRunningTaskStatus status)
