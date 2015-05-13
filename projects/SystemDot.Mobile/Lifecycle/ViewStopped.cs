@@ -1,6 +1,6 @@
 namespace SystemDot.Mobile.Lifecycle
 {
-    public class ApplicationStopped
+    public class ViewStopped
     {
     }
 }

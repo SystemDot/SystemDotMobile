@@ -30,13 +30,13 @@ namespace SystemDot.Mobile
 
         protected override void OnStart()
         {
-            TypedViewModel.MessageDispatcher.Send(new ApplicationStarted());
+            TypedViewModel.MessageDispatcher.Send(new ViewStarted());
             base.OnStart();
         }
 
         protected override void OnRestart()
         {
-            TypedViewModel.MessageDispatcher.Send(new ApplicationRestarted());
+            TypedViewModel.MessageDispatcher.Send(new ViewRestarted());
             base.OnRestart();
         }
 
@@ -56,7 +56,7 @@ namespace SystemDot.Mobile
 
         protected override void OnStop()
         {
-            TypedViewModel.MessageDispatcher.Send(new ApplicationStopped());
+            TypedViewModel.MessageDispatcher.Send(new ViewStopped());
             base.OnStop();
         }
 

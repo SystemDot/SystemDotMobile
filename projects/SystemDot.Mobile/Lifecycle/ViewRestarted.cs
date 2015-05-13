@@ -1,6 +1,6 @@
 ﻿namespace SystemDot.Mobile.Lifecycle
 {
-    public class ApplicationRestarted
+    public class ViewRestarted
     {
     }
 }
