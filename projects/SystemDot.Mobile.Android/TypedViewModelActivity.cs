@@ -7,6 +7,7 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace SystemDot.Mobile
 {
+    using SystemDot.Mobile.Alerts;
     using SystemDot.Mobile.Lifecycle;
 
     public abstract class TypedViewModelActivity<TViewModel> : MvxActivity
@@ -74,6 +75,9 @@ namespace SystemDot.Mobile
                     LaunchRingDialog();
                     break;
                 case CurrentRunningTaskStatus.Finished:
+                    ringProgressDialog.Dismiss();
+                    break;
+                case CurrentRunningTaskStatus.Error:
                     ringProgressDialog.Dismiss();
                     break;
             }

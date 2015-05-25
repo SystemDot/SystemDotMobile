@@ -22,11 +22,12 @@ namespace SystemDot.Mobile.Mvvm
         protected ViewModel(ViewModelContext context)
         {
             this.context = context;
-            CurrentRunningTask = new CurrentRunningTask();
+            CurrentRunningTask = new CurrentRunningTask(context.AsyncContextExceptionHandler);
             tokens = new List<IActionSubscriptionToken>();
 
             context.ViewModelLocator.SetLocation(this);
         }
+
 
         public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
             Func<TViewModel, 

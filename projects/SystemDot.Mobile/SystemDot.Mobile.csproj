@@ -48,6 +48,7 @@
     <Compile Include="Lifecycle\ViewRestarted.cs" />
     <Compile Include="Mvvm\Converters\DateTimeExtensions.cs" />
     <Compile Include="Mvvm\Converters\DynamicDateTimeToStringConverter.cs" />
+    <Compile Include="Mvvm\Parallelism\IAsyncContextExceptionHandler.cs" />
     <Compile Include="Mvvm\Navigation\IInitialiseView.cs" />
     <Compile Include="Mvvm\Navigation\IViewModelNavigator.cs" />
     <Compile Include="Mvvm\Navigation\MvxViewModelNavigator.cs" />

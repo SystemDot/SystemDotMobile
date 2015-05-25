@@ -5,23 +5,32 @@ namespace SystemDot.Mobile.Mvvm.Parallelism
 {
     public class CurrentRunningTask
     {
-        Task task;
-
+        readonly IAsyncContextExceptionHandler exceptionHandler;
         public readonly NotifyChange<CurrentRunningTaskStatus> Status = new NotifyChange<CurrentRunningTaskStatus>();
+        Task task;
+        
+        public CurrentRunningTask(IAsyncContextExceptionHandler exceptionHandler)
+        {
+            this.exceptionHandler = exceptionHandler;
+        }
 
         public void RunInAsyncContext(Task toSet)
         {
             Status.Value = CurrentRunningTaskStatus.Running;
 
             toSet
+                .ContinueWith(
+                    t =>
+                    {
+                        exceptionHandler.Handle(t.Exception);
+                        Status.Value = CurrentRunningTaskStatus.Error;
+                    },
+                    TaskContinuationOptions.OnlyOnFaulted)
                 .ContinueWith(t =>
                 {
                     Status.Value = CurrentRunningTaskStatus.Finished;
                     Status.Value = CurrentRunningTaskStatus.NotRunning;
-                })
-            .ContinueWith(t => 
-                t.Exception.Handle(ex => { throw ex; }), 
-                TaskContinuationOptions.OnlyOnFaulted);
+                });
 
             task = toSet;
         }

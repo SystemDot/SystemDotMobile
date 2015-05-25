@@ -45,6 +45,11 @@ namespace SystemDot.Mobile.Mvvm
         {
             ViewModel.RaiseInAsyncContext(initialiseEvent);
         }
+
+        protected void RaiseInAsyncContext<TEvent>() where TEvent : new()
+        {
+            ViewModel.RaiseInAsyncContext<TEvent>();
+        }
     }
 
     public abstract class ViewModelCommand<TParameter, TViewModel> : MvxCommandBase, IMvxCommand

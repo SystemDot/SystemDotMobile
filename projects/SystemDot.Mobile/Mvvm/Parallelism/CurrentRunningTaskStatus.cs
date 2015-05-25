@@ -4,6 +4,7 @@ namespace SystemDot.Mobile.Mvvm.Parallelism
     {
         NotRunning,
         Running,
-        Finished
+        Finished,
+        Error
     }
 }

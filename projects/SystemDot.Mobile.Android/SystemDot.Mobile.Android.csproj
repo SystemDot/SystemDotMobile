@@ -164,6 +164,7 @@
     <Compile Include="ActionBarActivityWithValidation.cs" />
     <Compile Include="ActionBarActivity.cs" />
     <Compile Include="Alerts\Alerter.cs" />
+    <Compile Include="Alerts\ContextWrapperExtensions.cs" />
     <Compile Include="Alerts\EmailViewNavigator.cs" />
     <Compile Include="Bootstrap\FieldBindingPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MethodBindingPluginBootstrap.cs" />
@@ -183,13 +184,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SystemDot.Mobile\SystemDot.Mobile.csproj">
-      <Project>{0e1cbf81-0e1c-46b3-bd68-8eeff9e44e87}</Project>
-      <Name>SystemDot.Mobile</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\Values\attr_styleable.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Values\attr_styleable.xml" />
+    <ProjectReference Include="..\SystemDot.Mobile\SystemDot.Mobile.csproj">
+      <Project>{0E1CBF81-0E1C-46B3-BD68-8EEFF9E44E87}</Project>
+      <Name>SystemDot.Mobile</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
