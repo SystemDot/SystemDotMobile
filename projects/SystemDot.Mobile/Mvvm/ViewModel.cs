@@ -73,6 +73,11 @@ namespace SystemDot.Mobile.Mvvm
             await SendCommandAsync(message);
         }
 
+        public async Task SendCommandAsync<TCommand>() where TCommand : new()
+        {
+            await SendCommandAsync(new TCommand());
+        }
+
         async Task SendCommandAsync<TCommand>(TCommand toSend)
         {
             OnSendingCommand();

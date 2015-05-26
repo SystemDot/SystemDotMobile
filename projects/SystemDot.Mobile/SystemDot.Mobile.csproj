@@ -43,9 +43,6 @@
     <Compile Include="Ioc\CallbackDictionary.cs" />
     <Compile Include="Ioc\CallbackList.cs" />
     <Compile Include="Ioc\MvxIocContainer.cs" />
-    <Compile Include="Lifecycle\ViewStarted.cs" />
-    <Compile Include="Lifecycle\ViewStopped.cs" />
-    <Compile Include="Lifecycle\ViewRestarted.cs" />
     <Compile Include="Mvvm\Converters\DateTimeExtensions.cs" />
     <Compile Include="Mvvm\Converters\DynamicDateTimeToStringConverter.cs" />
     <Compile Include="Mvvm\Parallelism\IAsyncContextExceptionHandler.cs" />

@@ -54,6 +54,12 @@ namespace SystemDot.Mobile.Mvvm
             await ViewModel.SendCommandAsync(initaliseCommandAction);
         }
 
+        protected async Task SendCommandAsync<TCommand>()
+            where TCommand : new()
+        {
+            await ViewModel.SendCommandAsync<TCommand>();
+        }
+
         protected void RaiseViewEventInAsyncContext<TViewEvent>(Action<TViewEvent> initialiseEvent) 
             where TViewEvent : new()
         {

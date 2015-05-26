@@ -7,9 +7,6 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace SystemDot.Mobile
 {
-    using SystemDot.Mobile.Alerts;
-    using SystemDot.Mobile.Lifecycle;
-
     public abstract class TypedViewModelActivity<TViewModel> : MvxActivity
         where TViewModel : ViewModel<TViewModel>
     {
@@ -29,18 +26,6 @@ namespace SystemDot.Mobile
             get { return ViewModel.As<TViewModel>(); }
         }
 
-        protected override void OnStart()
-        {
-            TypedViewModel.MessageDispatcher.Send(new ViewStarted());
-            base.OnStart();
-        }
-
-        protected override void OnRestart()
-        {
-            TypedViewModel.MessageDispatcher.Send(new ViewRestarted());
-            base.OnRestart();
-        }
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -53,12 +38,6 @@ namespace SystemDot.Mobile
         {
             TypedViewModel.ResumeInAsyncContext();
             base.OnResume();
-        }
-
-        protected override void OnStop()
-        {
-            TypedViewModel.MessageDispatcher.Send(new ViewStopped());
-            base.OnStop();
         }
 
         void SetupProgressIndication()
