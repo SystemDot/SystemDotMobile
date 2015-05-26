@@ -11,5 +11,15 @@ namespace SystemDot.Mobile.Mvvm.Validation
         {
             ValidationMessage = new StringNotifyChange();
         }
+
+        public bool IsInvalid
+        {
+            get { return !string.IsNullOrEmpty(ValidationMessage.Value); }
+        }
+
+        protected override void OnSendingCommand()
+        {
+            ValidationMessage.Value = string.Empty;
+        }
     }
 }

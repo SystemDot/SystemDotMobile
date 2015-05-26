@@ -1,11 +1,13 @@
 namespace SystemDot.Mobile.Mvvm
 {
     using System;
+    using System.Threading.Tasks;
     using SystemDot.Core;
+    using SystemDot.Mobile.Mvvm.Validation;
     using Cirrious.MvvmCross.ViewModels;
 
     public abstract class ViewModelCommand<TViewModel> : MvxCommandBase, IMvxCommand
-        where TViewModel : ViewModel<TViewModel>
+        where TViewModel : ValidatableViewModel<TViewModel>
     {
         public TViewModel ViewModel { get; private set; }
 
@@ -35,20 +37,42 @@ namespace SystemDot.Mobile.Mvvm
 
         protected abstract void OnExecute();
 
+        protected void RunInAsyncContext(Func<Task> toRun)
+        {
+            ViewModel.RunInAsyncContext(toRun);
+        }
+
         protected void SendCommandInAsyncContext<TCommand>(Action<TCommand> initaliseCommandAction)
             where TCommand : new()
         {
             ViewModel.SendCommandInAsyncContext(initaliseCommandAction);
         }
 
-        protected void RaiseInAsyncContext<TEvent>(Action<TEvent> initialiseEvent) where TEvent : new()
+        protected async Task SendCommandAsync<TCommand>(Action<TCommand> initaliseCommandAction)
+            where TCommand : new()
         {
-            ViewModel.RaiseInAsyncContext(initialiseEvent);
+            await ViewModel.SendCommandAsync(initaliseCommandAction);
         }
 
-        protected void RaiseInAsyncContext<TEvent>() where TEvent : new()
+        protected void RaiseViewEventInAsyncContext<TViewEvent>(Action<TViewEvent> initialiseEvent) 
+            where TViewEvent : new()
         {
-            ViewModel.RaiseInAsyncContext<TEvent>();
+            ViewModel.RaiseViewEventInAsyncContext(initialiseEvent);
+        }
+
+        protected void RaiseViewEventInAsyncContext<TViewEvent>() where TViewEvent : new()
+        {
+            ViewModel.RaiseViewEventInAsyncContext<TViewEvent>();
+        }
+
+        protected async Task RaiseEventIfViewValidAsync<TViewEvent>(Action<TViewEvent> initialiseEvent) where TViewEvent : new()
+        {
+            if (ViewModel.IsInvalid)
+            {
+                return;
+            }
+
+            await ViewModel.RaiseViewEventAsync(initialiseEvent);
         }
     }
 
@@ -85,7 +109,7 @@ namespace SystemDot.Mobile.Mvvm
 
         protected void RaiseInAsyncContext<TEvent>(Action<TEvent> initialiseEvent) where TEvent : new()
         {
-            ViewModel.RaiseInAsyncContext(initialiseEvent);
+            ViewModel.RaiseViewEventInAsyncContext(initialiseEvent);
         }
     }
 }

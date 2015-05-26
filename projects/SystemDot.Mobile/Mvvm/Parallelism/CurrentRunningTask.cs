@@ -25,12 +25,14 @@ namespace SystemDot.Mobile.Mvvm.Parallelism
                         exceptionHandler.Handle(t.Exception);
                         Status.Value = CurrentRunningTaskStatus.Error;
                     },
-                    TaskContinuationOptions.OnlyOnFaulted)
-                .ContinueWith(t =>
-                {
-                    Status.Value = CurrentRunningTaskStatus.Finished;
-                    Status.Value = CurrentRunningTaskStatus.NotRunning;
-                });
+                    TaskContinuationOptions.ExecuteSynchronously | TaskContinuationOptions.OnlyOnFaulted)
+                .ContinueWith(
+                    t =>
+                    {
+                        Status.Value = CurrentRunningTaskStatus.Finished;
+                        Status.Value = CurrentRunningTaskStatus.NotRunning;
+                    },
+                    TaskContinuationOptions.ExecuteSynchronously);
 
             task = toSet;
         }

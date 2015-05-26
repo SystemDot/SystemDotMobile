@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using SystemDot.Messaging.Handling.Actions;
 using SystemDot.Mobile.Mvvm.Parallelism;
 using Cirrious.MvvmCross.FieldBinding;
 using Cirrious.MvvmCross.ViewModels;
@@ -14,7 +12,6 @@ namespace SystemDot.Mobile.Mvvm
         where TViewModel : ViewModel<TViewModel>
     {
         readonly ViewModelContext context;
-        readonly List<IActionSubscriptionToken> tokens;
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }       
         public Dispatcher MessageDispatcher { get { return context.Dispatcher; } }
@@ -23,40 +20,66 @@ namespace SystemDot.Mobile.Mvvm
         {
             this.context = context;
             CurrentRunningTask = new CurrentRunningTask(context.AsyncContextExceptionHandler);
-            tokens = new List<IActionSubscriptionToken>();
 
             context.ViewModelLocator.SetLocation(this);
         }
 
-
-        public InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
+        protected InputChangeOptions<TViewModel, TProperty> OnInputChangedFor<TProperty>(
             Func<TViewModel, 
             INotifyChange<TProperty>> property)
         {
             return new InputChangeOptions<TViewModel, TProperty>((TViewModel)this, property, context.ThrottleFactory);
         }
 
-        public void RaiseInAsyncContext<T>() where T : new()
+        public void RaiseViewEventInAsyncContext<TViewEvent>() 
+            where TViewEvent : new()
         {
-            RaiseInAsyncContext<T>(m => { });
+            RunInAsyncContext(() => context.Dispatcher.SendAsync(new TViewEvent()));
         }
 
-        public void RaiseInAsyncContext<T>(Action<T> initialiseEvent) where T : new()
+        public void RaiseViewEventInAsyncContext<TViewEvent>(Action<TViewEvent> initialiseEvent) 
+            where TViewEvent : new()
         {
-            var message = new T();
+            RunInAsyncContext(() => RaiseViewEventAsync(initialiseEvent));
+        }
+
+        public async Task RaiseViewEventAsync<TViewEvent>(Action<TViewEvent> initialiseEvent) where TViewEvent : new()
+        {
+            var message = new TViewEvent();
             initialiseEvent(message);
-            RunInAsyncContext(() => context.Dispatcher.SendAsync(message));
+            await RaiseViewEventAsync(message);
+        }
+
+        async Task RaiseViewEventAsync<TViewEvent>(TViewEvent message) 
+            where TViewEvent : new()
+        {
+            await context.Dispatcher.SendAsync(message);
         }
 
         public void SendCommandInAsyncContext<TCommand>(TCommand toSend)
         {
-            RunInAsyncContext(() => context.CommandBus.SendCommandAsync(toSend));
+            RunInAsyncContext(() => SendCommandAsync(toSend));
         }
 
         public void SendCommandInAsyncContext<TCommand>(Action<TCommand> initaliseCommandAction) where TCommand : new()
         {
-            RunInAsyncContext(() => context.CommandBus.SendCommandAsync(initaliseCommandAction));
+            RunInAsyncContext(() => SendCommandAsync(initaliseCommandAction));
         }
+
+        public async Task SendCommandAsync<TCommand>(Action<TCommand> initaliseCommand) where TCommand : new()
+        {
+            var message = new TCommand();
+            initaliseCommand(message);
+            await SendCommandAsync(message);
+        }
+
+        async Task SendCommandAsync<TCommand>(TCommand toSend)
+        {
+            OnSendingCommand();
+            await context.CommandBus.SendCommandAsync(toSend);
+        }
+
+        protected abstract void OnSendingCommand();
 
         public void ResumeInAsyncContext()
         {
@@ -65,19 +88,14 @@ namespace SystemDot.Mobile.Mvvm
 
         protected abstract Task LoadDataAsync();
 
-        public void Alert(string message)
-        {
-            context.Dispatcher.SendAlert(message);
-        }
-
-        public void When<T>(Action<T> whenAction)
-        {
-            tokens.Add(context.Dispatcher.RegisterHandler(whenAction));
-        }
-
         public void RunInAsyncContext(Func<Task> toRun)
         {
             CurrentRunningTask.RunInAsyncContext(toRun());
+        }
+
+        public void Alert(string message)
+        {
+            context.Dispatcher.SendAlert(message);
         }
     }
 }
