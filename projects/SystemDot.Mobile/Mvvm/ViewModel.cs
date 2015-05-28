@@ -6,21 +6,17 @@ using Cirrious.MvvmCross.ViewModels;
 
 namespace SystemDot.Mobile.Mvvm
 {
-    using SystemDot.Messaging.Simple;
-
     public abstract class ViewModel<TViewModel> : MvxViewModel 
         where TViewModel : ViewModel<TViewModel>
     {
         readonly ViewModelContext context;
 
         public CurrentRunningTask CurrentRunningTask { get; private set; }       
-        public Dispatcher MessageDispatcher { get { return context.Dispatcher; } }
 
         protected ViewModel(ViewModelContext context)
         {
             this.context = context;
             CurrentRunningTask = new CurrentRunningTask(context.AsyncContextExceptionHandler);
-
             context.ViewModelLocator.SetLocation(this);
         }
 

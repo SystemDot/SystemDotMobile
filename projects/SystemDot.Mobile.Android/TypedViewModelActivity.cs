@@ -7,6 +7,8 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace SystemDot.Mobile
 {
+    using SystemDot.ThreadMarshalling;
+
     public abstract class TypedViewModelActivity<TViewModel> : MvxActivity
         where TViewModel : ViewModel<TViewModel>
     {
@@ -29,6 +31,7 @@ namespace SystemDot.Mobile
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            MainActivityLocator.Set(this);
             SetContentView(layoutId);
             SetupProgressIndication();
             AfterInitialContentSetup();
