@@ -6,4 +6,7 @@
   <declare-styleable name="LabelledNumberPicker">
     <attr name="fieldName" format="string" />
   </declare-styleable>
+  <declare-styleable name="LabelledNumberPicker">
+    <attr name="editable" format="boolean" />
+  </declare-styleable>
 </resources>

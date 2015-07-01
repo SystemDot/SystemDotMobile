@@ -27,6 +27,9 @@ namespace SystemDot.Mobile
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010002
+			public static int editable = 2130771970;
+			
 			// aapt resource value: 0x7f010001
 			public static int fieldName = 2130771969;
 			
@@ -231,7 +234,11 @@ namespace SystemDot.Mobile
 		{
 			
 			public static int[] LabelledNumberPicker = new int[] {
-					2130771969};
+					2130771969,
+					2130771970};
+			
+			// aapt resource value: 1
+			public static int LabelledNumberPicker_editable = 1;
 			
 			// aapt resource value: 0
 			public static int LabelledNumberPicker_fieldName = 0;
